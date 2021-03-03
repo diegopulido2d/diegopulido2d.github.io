@@ -1,0 +1,487 @@
+body {
+  background-color: white;
+  width: 100%;
+  margin: 0;
+}
+
+body nav {
+  width: 100%;
+  height: 28px;
+  background-color: white;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 80px;
+  z-index: 99;
+  border-bottom: solid 0.5px lightgray;
+}
+
+body nav img {
+  width: 30px;
+}
+
+body nav .menu {
+  width: 600px;
+}
+
+body nav .menu_mobile {
+  width: 120px;
+}
+
+body nav .menu_mobile label img {
+  padding: 7px;
+  width: 20px;
+  cursor: pointer;
+}
+
+body nav ul {
+  margin: 7px;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body nav ul li {
+  padding: 0 20px;
+}
+
+body nav ul li a {
+  text-decoration: none;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: #060a24;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+body nav ul li a:hover {
+  text-decoration: line-through;
+  color: #00f3bb;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+body nav ul li a:active {
+  text-decoration: line-through;
+  color: rgba(6, 10, 36, 0.56);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+body button {
+  margin-top: 50px;
+  width: 180px;
+  height: 50px;
+  background-image: linear-gradient(225deg, #00F0B8 100%, #00F0B8 100%);
+  border: solid 1px transparent;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+body button h4 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+body button:hover {
+  background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 1px solid transparent;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+body button:hover h4 {
+  color: white;
+}
+
+body #menumobile {
+  display: none;
+}
+
+body .dropdown_menu {
+  position: absolute;
+  top: -80px;
+}
+
+body #menumobile:checked ~ .dropdown_menu {
+  background-color: #0000EC;
+  top: 68px;
+  left: 0px;
+  width: 100%;
+}
+
+body #menumobile:checked ~ .dropdown_menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+}
+
+body #menumobile:checked ~ .dropdown_menu ul li a {
+  color: white;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+body .text_container h3 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+body .text_container p {
+  width: 320px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+}
+
+body section {
+  position: relative;
+  padding: 0 180px;
+}
+
+body .mainbanner {
+  padding-top: 180px;
+}
+
+body .mainbanner h1 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 300;
+  font-size: 48px;
+  margin: 0;
+}
+
+body .mainbanner h1 span {
+  text-decoration: line-through;
+}
+
+body .mainbanner p {
+  width: 455px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
+  font-size: 12px;
+  text-align: justify;
+}
+
+body .episodios {
+  padding-top: 150px;
+  padding-bottom: 200px;
+  background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+  -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0 100%);
+          clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0 100%);
+  /* change the calc height to a percentage height to get alternate responsive behavior*/
+}
+
+body .episodios h2 {
+  padding: 20px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  color: white;
+}
+
+body .episodios .podcast_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .episodios .podcast_container iframe {
+  padding-bottom: 40px;
+}
+
+body .section_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: -160px;
+}
+
+body .section_container .img_container, body .section_container .text_container {
+  width: 45%;
+}
+
+body .section_container .img_container img {
+  width: 90%;
+}
+
+body .gallery {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body .gallery .column {
+  width: 33.3%;
+  height: auto;
+}
+
+body .gallery .column img {
+  display: block;
+  width: 100%;
+}
+
+body .temas ul {
+  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body .temas ul li {
+  width: 25%;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .temas ul li h5 {
+  text-align: center;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 18px;
+}
+
+body .call_to_action {
+  padding-top: 130px;
+  padding-bottom: 130px;
+  background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+  -webkit-clip-path: polygon(0 35%, 100% 0%, 100% 100%, 0 100%);
+          clip-path: polygon(0 35%, 100% 0%, 100% 100%, 0 100%);
+  /* change the calc height to a percentage height to get alternate responsive behavior*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .call_to_action h3 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: white;
+  font-weight: 200;
+}
+
+body .call_to_action .text_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .call_to_action .text_container button {
+  margin: 0;
+  width: 240px;
+}
+
+body footer {
+  padding: 10px 50px;
+  font-family: 'IBM Plex Mono', monospace;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body footer .socialmedia ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0;
+}
+
+body footer .socialmedia ul li {
+  padding: 0 10px;
+  list-style-type: none;
+}
+
+body footer .socialmedia ul li span {
+  font-size: 18px;
+  color: #060A24;
+  letter-spacing: 0;
+  line-height: 28px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+body footer .socialmedia ul li span:hover {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: #00f3bb;
+}
+
+@media only screen and (max-width: 600px) {
+  body .menu {
+    display: none;
+  }
+  body nav {
+    padding: 20px 40px;
+  }
+  body nav li {
+    padding: 10 0px;
+  }
+  body section {
+    padding: 20px;
+  }
+  body .mainbanner {
+    padding-top: 180px;
+  }
+  body .mainbanner p {
+    width: 100%;
+  }
+  body .episodios {
+    -webkit-clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0 100%);
+            clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0 100%);
+    padding-top: 80px;
+  }
+  body .podcast_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .podcast_container iframe {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  body .section_container {
+    position: relative;
+    margin-top: -170px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+  }
+  body .section_container .img_container {
+    width: 100%;
+  }
+  body .section_container .img_container img {
+    width: 100%;
+    top: 0;
+  }
+  body .section_container .text_container {
+    width: 100%;
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
+  }
+  body .section_container .text_container p {
+    width: 100%;
+    font-size: 16px;
+  }
+  body .gallery .column {
+    width: 100%;
+  }
+  body .temas ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .temas ul li {
+    width: 100%;
+    padding-bottom: 30px;
+  }
+  body .call_to_action {
+    -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 100%);
+            clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 100%);
+  }
+  body .call_to_action .text_container h3 {
+    text-align: center;
+  }
+  body footer {
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  body .menu_mobile {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

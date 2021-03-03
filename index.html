@@ -3,12 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Podcast Site - Diego Pulido</title>
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400;500;600;700&family=IBM+Plex+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/193e68cff9.css">
+    
 </head>
 <body>
-    <h1>ABRACADABRACAB</h1>
-    <h3 style="color: green;">VAMO A PEGALO</h3>
-    <h6>Como es, como sería</h6>
+
+     <header>
+    <nav>
+        <div class="logo">
+            <a href="#"><img src="images/logo.svg" alt=""></a>
+        </div>
+        <div class="menu_mobile">
+            <form action="">
+                <label for="menumobile"><img src="images/lista.svg" alt=""></label>
+                <input type="checkbox" name="" id="menumobile">
+                <div class="dropdown_menu">
+                    <ul>
+                        <li><a href="#">EPISODIOS</a></li>
+                        <li><a href="#">NOSOTROS</a></li>
+                        <li><a href="#">ENTREVISTAS</a></li>
+                        <li><a href="#">TÓPICOS</a></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">EPISODIOS</a></li>
+                <li><a href="#">NOSOTROS</a></li>
+                <li><a href="#">ENTREVISTAS</a></li>
+                <li><a href="#">TÓPICOS</a></li>
+            </ul>
+        </div>
+    </nav>
+    </header>
+    
+    <section class="mainbanner">
+        <h1>Hello <span>world</span> pale blue dot.</h1>
+        <p>El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.</p>
+        <button>
+            <h4>CONOCÉ MÁS</h4>
+        </button>
+    </section>
+
+    <section class="episodios">
+        <h2>Episodios</h2>
+
+        <div class="podcast_container">
+        <iframe src="https://open.spotify.com/embed-podcast/show/0SAv0bEYhFndhLODSzPIfL" width="45%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe src="https://open.spotify.com/embed-podcast/show/0SAv0bEYhFndhLODSzPIfL" width="45%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+
+        <div class="podcast_container">
+        <iframe src="https://open.spotify.com/embed-podcast/show/0SAv0bEYhFndhLODSzPIfL" width="45%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe src="https://open.spotify.com/embed-podcast/show/0SAv0bEYhFndhLODSzPIfL" width="45%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+
+    </section>
+
+    <section class="section_container">
+            <div class="img_container">
+                <img src="/images/phone.png" alt="">
+            </div>
+            <div class="text_container">
+                <h3>De dónde venimos</h3>
+                <p>Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light. <br>
+                    Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.
+                </p>
+            </div>
+            <div class="text_container">
+                <br>
+                <h3>Invitadas/os estelares</h3>
+            </div> 
+    </section>
+
+    <section class="gallery">
+        <div class="column"><img src="images/grace-hopper.png" alt=""></div>
+        <div class="column"><img src="images/Katie-Bouman.png" alt=""></div>
+        <div class="column"><img src="images/Margaret_Hamilton.png" alt=""></div>
+        <div class="column"><img src="images/An E.R.A.Univac 1103 computer in the 1950s.png" alt=""></div>
+        <div class="column"><img src="images/Computer operators with an Eniac — the world’s first programmable general-purpose computer.png" alt=""></div>
+        <div class="column"><img src="images/susan-kare.png" alt=""></div>
+    </section>
+
+    <section class="temas">
+        <div class="text_container">
+            <br>
+            <h3>Algunos de nuestros temas</h3>
+        </div>
+        <ul>
+            <li>
+                <img src="images/icon1.svg" alt="">
+                <h5>Trabajo remoto</h5>
+            </li>
+            <li>
+                <img src="images/icon2.svg" alt="">
+                <h5>Repensando la <br>programación</h5>
+            </li>
+            <li>
+                <img src="images/icon3.svg" alt="">
+                <h5>Bases del código</h5>
+            </li>
+            <li>
+                <img src="images/icon4.svg" alt="">
+                <h5>Seguridad<br>informática</h5>
+            </li>
+        </ul>
+    </section>
+
+    <section class="call_to_action">
+        <div class="text_container">
+            <h3>¿Querés las útimas novedades?</h3>
+            <button><h4>ESCUCHÁ LOS EPISODIOS</h4></button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2019— Hello blue pale dot </p>
+        <div class="socialmedia">
+            <ul>
+                <li><a href="#"><span class="fa fa-spotify"></span></a></li>
+                <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+                <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                <li><a href="#"><span class="fa fa-telegram"></span></a></li>
+            </ul>
+        </div>
+    </footer>
+    
     
 </body>
 </html>
