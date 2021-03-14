@@ -35,16 +35,6 @@ body nav .menu {
 body nav .menu_mobile {
   width: 100px;
   padding-top: 5px;
-  /* 
-            * Transform all the slices of hamburger
-            * into a crossmark.
-            */
-  /*
-            * But let's hide the middle one.
-            */
-  /*
-            * Ohyeah and the last one should go the other direction
-            */
 }
 
 body nav .menu_mobile input {
@@ -54,9 +44,7 @@ body nav .menu_mobile input {
   position: absolute;
   cursor: pointer;
   opacity: 0;
-  /* hide this */
   z-index: 2;
-  /* and place it over the hamburger */
   -webkit-touch-callout: none;
 }
 
