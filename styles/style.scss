@@ -23,15 +23,96 @@ body{
             width: 600px;
         }
 
-        .menu_mobile{
-            width: 120px;
 
-            label img{
-                padding: 7px;
-                width:20px;
-                cursor: pointer;
+        
+
+        .menu_mobile{
+            width: 100px;
+            padding-top: 5px;
+
+           input{
+              display: block;
+              width: 40px;
+              height: 32px;
+              position: absolute;
+              
+              cursor: pointer;
+              
+              opacity: 0; /* hide this */
+              z-index: 2; /* and place it over the hamburger */
+              
+              -webkit-touch-callout: none;
             }
+
+
+            span
+            {
+            display: block;
+            width: 33px;
+            height: 4px;
+            margin-bottom: 5px;
+            position: relative;
+            
+            background: #cdcdcd;
+            border-radius: 3px;
+            
+            z-index: 1;
+            
+            transform-origin: 4px 0px;
+            
+            transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                        background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                        opacity 0.55s ease;
+            }
+
+            span:first-child
+            {
+            transform-origin: 0% 0%;
+            }
+
+            span:nth-last-child(2)
+            {
+            transform-origin: 0% 100%;
+            }
+
+            /* 
+            * Transform all the slices of hamburger
+            * into a crossmark.
+            */
+            input:checked ~ span
+            {
+            opacity: 1;
+            transform: rotate(45deg) translate(-2px, -1px);
+            background: #232323;
+            }
+
+            /*
+            * But let's hide the middle one.
+            */
+            input:checked ~ span:nth-last-child(3)
+            {
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
+            }
+
+            /*
+            * Ohyeah and the last one should go the other direction
+            */
+            input:checked ~ span:nth-last-child(2)
+            {
+            transform: rotate(-45deg) translate(0, -1px);
+            }
+            
+            
         }
+
+
+
+
+
+
+
+
 
         ul{
             margin: 7px;
@@ -101,11 +182,6 @@ body{
     }
 
 
-
-
-        #menumobile{
-            display: none;
-        }
 
         .dropdown_menu{
             position: absolute;
@@ -190,11 +266,14 @@ body{
             }
 
             .podcast_container{
+                width: 100%;
                 display: flex;
                 justify-content: space-between;
 
                 iframe{
+                    height: 232px;
                     padding-bottom: 40px;
+                    border: none;
                 }
 
             }
@@ -252,7 +331,6 @@ body{
                 align-items: flex-start;
 
                 li{
-                    width: 25%;
                     list-style-type: none;
                     display: flex;
                     flex-direction: column;
@@ -262,6 +340,11 @@ body{
                         text-align: center;
                         font-family: 'IBM Plex Sans', sans-serif;
                         font-size: 18px;
+                    }
+
+                    img{
+                        max-width: 60px;
+                        margin: 0 auto;
                     }
 
                 }
@@ -332,8 +415,6 @@ body{
 
                 }
         }
-        
-
 
 
 
@@ -450,6 +531,13 @@ body{
             .menu_mobile{
                 display: none;
             }
+
+            iframe{
+                width: 100%;
+                padding: 20px;
+            }
+
+
           }
 
         

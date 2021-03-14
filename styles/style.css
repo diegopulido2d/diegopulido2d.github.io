@@ -33,13 +33,76 @@ body nav .menu {
 }
 
 body nav .menu_mobile {
-  width: 120px;
+  width: 100px;
+  padding-top: 5px;
+  /* 
+            * Transform all the slices of hamburger
+            * into a crossmark.
+            */
+  /*
+            * But let's hide the middle one.
+            */
+  /*
+            * Ohyeah and the last one should go the other direction
+            */
 }
 
-body nav .menu_mobile label img {
-  padding: 7px;
-  width: 20px;
+body nav .menu_mobile input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
   cursor: pointer;
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+body nav .menu_mobile span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  -webkit-transform-origin: 4px 0px;
+          transform-origin: 4px 0px;
+  -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+body nav .menu_mobile span:first-child {
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+}
+
+body nav .menu_mobile span:nth-last-child(2) {
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+}
+
+body nav .menu_mobile input:checked ~ span {
+  opacity: 1;
+  -webkit-transform: rotate(45deg) translate(-2px, -1px);
+          transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+body nav .menu_mobile input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+          transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+body nav .menu_mobile input:checked ~ span:nth-last-child(2) {
+  -webkit-transform: rotate(-45deg) translate(0, -1px);
+          transform: rotate(-45deg) translate(0, -1px);
 }
 
 body nav ul {
@@ -111,10 +174,6 @@ body button:hover {
 
 body button:hover h4 {
   color: white;
-}
-
-body #menumobile {
-  display: none;
 }
 
 body .dropdown_menu {
@@ -204,6 +263,7 @@ body .episodios h2 {
 }
 
 body .episodios .podcast_container {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -213,7 +273,9 @@ body .episodios .podcast_container {
 }
 
 body .episodios .podcast_container iframe {
+  height: 232px;
   padding-bottom: 40px;
+  border: none;
 }
 
 body .section_container {
@@ -275,7 +337,6 @@ body .temas ul {
 }
 
 body .temas ul li {
-  width: 25%;
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -293,6 +354,11 @@ body .temas ul li h5 {
   text-align: center;
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 18px;
+}
+
+body .temas ul li img {
+  max-width: 60px;
+  margin: 0 auto;
 }
 
 body .call_to_action {
@@ -482,6 +548,10 @@ body footer .socialmedia ul li span:hover {
 @media only screen and (min-width: 601px) {
   body .menu_mobile {
     display: none;
+  }
+  body iframe {
+    width: 100%;
+    padding: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
