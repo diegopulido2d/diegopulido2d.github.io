@@ -2,13 +2,12 @@ body {
   background-color: white;
   width: 100%;
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body nav {
-  width: 100%;
   height: 28px;
   background-color: white;
-  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,7 +20,11 @@ body nav {
           justify-content: space-between;
   padding: 20px 80px;
   z-index: 99;
-  border-bottom: solid 0.5px lightgray;
+  border-top: solid 5px #572EE5;
+}
+
+body nav .logo {
+  font-family: 'Roboto', sans-serif;
 }
 
 body nav img {
@@ -32,8 +35,12 @@ body nav .menu {
   width: 600px;
 }
 
+body nav h4 {
+  color: #572EE5;
+  margin: 0;
+}
+
 body nav .menu_mobile {
-  width: 100px;
   padding-top: 5px;
 }
 
@@ -100,9 +107,9 @@ body nav ul {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 body nav ul li {
@@ -111,7 +118,6 @@ body nav ul li {
 
 body nav ul li a {
   text-decoration: none;
-  font-family: 'IBM Plex Mono', monospace;
   font-size: 12px;
   color: #060a24;
   -webkit-transition: 0.2s;
@@ -119,10 +125,10 @@ body nav ul li a {
 }
 
 body nav ul li a:hover {
-  text-decoration: line-through;
+  text-decoration: underline;
   color: #00f3bb;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 body nav ul li a:active {
@@ -132,48 +138,18 @@ body nav ul li a:active {
   transition: 0.2s;
 }
 
-body button {
-  margin-top: 50px;
-  width: 180px;
-  height: 50px;
-  background-image: linear-gradient(225deg, #00F0B8 100%, #00F0B8 100%);
-  border: solid 1px transparent;
-  cursor: pointer;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-
-body button h4 {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 14px;
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
-}
-
-body button:hover {
-  background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
-  background-repeat: no-repeat;
-  background-size: contain;
-  border: 1px solid transparent;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-
-body button:hover h4 {
-  color: white;
-}
-
 body .dropdown_menu {
   position: absolute;
   top: -80px;
 }
 
 body #menumobile:checked ~ .dropdown_menu {
-  background-color: #0000EC;
+  background-color: rgba(76, 42, 218, 0.9);
   top: 68px;
   left: 0px;
   width: 100%;
+  height: 100%;
+  z-index: 99;
 }
 
 body #menumobile:checked ~ .dropdown_menu ul {
@@ -184,217 +160,68 @@ body #menumobile:checked ~ .dropdown_menu ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 10px;
+  padding: 20px;
+  text-align: center;
 }
 
 body #menumobile:checked ~ .dropdown_menu ul li a {
   color: white;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
 }
 
 body .text_container h3 {
-  font-family: 'IBM Plex Sans', sans-serif;
   font-size: 32px;
   font-weight: 400;
 }
 
 body .text_container p {
   width: 320px;
-  font-family: 'IBM Plex Mono', monospace;
   font-size: 11px;
 }
 
 body section {
   position: relative;
-  padding: 0 180px;
+  padding: 0 150px;
 }
 
 body .mainbanner {
-  padding-top: 180px;
+  padding-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body .mainbanner h1 {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-weight: 300;
-  font-size: 48px;
-  margin: 0;
-}
-
-body .mainbanner h1 span {
-  text-decoration: line-through;
-}
-
-body .mainbanner p {
-  width: 455px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 300;
-  font-size: 12px;
-  text-align: justify;
-}
-
-body .episodios {
-  padding-top: 150px;
-  padding-bottom: 200px;
-  background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
-  -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0 100%);
-          clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0 100%);
-  /* change the calc height to a percentage height to get alternate responsive behavior*/
-}
-
-body .episodios h2 {
-  padding: 20px;
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-weight: 300;
-  font-size: 32px;
-  color: white;
-}
-
-body .episodios .podcast_container {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-body .episodios .podcast_container iframe {
-  height: 232px;
-  padding-bottom: 40px;
-  border: none;
-}
-
-body .section_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-top: -160px;
-}
-
-body .section_container .img_container, body .section_container .text_container {
-  width: 45%;
-}
-
-body .section_container .img_container img {
-  width: 90%;
-}
-
-body .gallery {
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-body .gallery .column {
-  width: 33.3%;
-  height: auto;
-}
-
-body .gallery .column img {
-  display: block;
-  width: 100%;
-}
-
-body .temas ul {
-  margin-top: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  padding: 0;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-body .temas ul li {
-  list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-body .temas ul li h5 {
+  font-weight: 600;
   text-align: center;
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 18px;
-}
-
-body .temas ul li img {
-  max-width: 60px;
-  margin: 0 auto;
-}
-
-body .call_to_action {
-  padding-top: 130px;
-  padding-bottom: 130px;
-  background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
-  -webkit-clip-path: polygon(0 35%, 100% 0%, 100% 100%, 0 100%);
-          clip-path: polygon(0 35%, 100% 0%, 100% 100%, 0 100%);
-  /* change the calc height to a percentage height to get alternate responsive behavior*/
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body .call_to_action h3 {
-  font-family: 'IBM Plex Sans', sans-serif;
-  color: white;
-  font-weight: 200;
-}
-
-body .call_to_action .text_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body .call_to_action .text_container button {
+  font-size: 40px;
   margin: 0;
-  width: 240px;
+  color: #572EE5;
 }
 
-body footer {
-  padding: 10px 50px;
-  font-family: 'IBM Plex Mono', monospace;
+body .mainbanner h1 b {
+  color: #50E3C2;
+}
+
+body .mainbanner img {
+  max-width: 400px;
+}
+
+body .mainbanner .searchBar {
+  border: 2px solid #572EE5;
+  border-radius: 40px;
+  width: 60%;
+  padding: 5px 40px;
+  margin-bottom: 40px;
+}
+
+body .mainbanner .searchBar form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -405,6 +232,114 @@ body footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+body .mainbanner .searchBar .autocomplete {
+  /*the container must be positioned relative:*/
+  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+
+body .mainbanner .searchBar input {
+  padding: 10px;
+  font-size: 14px;
+  border: transparent;
+  width: 90%;
+}
+
+body .mainbanner .searchBar i {
+  color: #572EE5;
+}
+
+body .mainbanner .searchBar .autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+body .mainbanner .searchBar .autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+body .mainbanner .searchBar .autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
+}
+
+body .mainbanner .searchBar .autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+
+body .mainbanner .trendingTopics {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+body .mainbanner .trendingTopics h4, body .mainbanner .trendingTopics span {
+  color: #572EE5;
+  margin: 10px 0;
+}
+
+body .trendingSlider {
+  padding: 40px 0;
+  background-color: #F3F5F8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .trendingSlider h2 {
+  color: #572EE5;
+  margin: 10px 0;
+}
+
+body footer {
+  padding: 25px 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: solid 5px #572EE5;
+}
+
+body footer p {
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+body footer .socialmedia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 body footer .socialmedia ul {
@@ -413,7 +348,7 @@ body footer .socialmedia ul {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 0;
+  padding: 0 20px;
 }
 
 body footer .socialmedia ul li {
@@ -423,7 +358,7 @@ body footer .socialmedia ul li {
 
 body footer .socialmedia ul li span {
   font-size: 18px;
-  color: #060A24;
+  color: #CDD6E0;
   letter-spacing: 0;
   line-height: 28px;
   -webkit-transition: 0.2s;
@@ -433,7 +368,7 @@ body footer .socialmedia ul li span {
 body footer .socialmedia ul li span:hover {
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  color: #00f3bb;
+  color: #572EE5;
 }
 
 @media only screen and (max-width: 600px) {
@@ -450,76 +385,13 @@ body footer .socialmedia ul li span:hover {
     padding: 20px;
   }
   body .mainbanner {
-    padding-top: 180px;
+    padding-top: 50px;
   }
   body .mainbanner p {
     width: 100%;
   }
-  body .episodios {
-    -webkit-clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0 100%);
-            clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0 100%);
-    padding-top: 80px;
-  }
-  body .podcast_container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  body .podcast_container iframe {
-    width: 100%;
-    padding-bottom: 20px;
-  }
-  body .section_container {
-    position: relative;
-    margin-top: -170px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: auto;
-  }
-  body .section_container .img_container {
-    width: 100%;
-  }
-  body .section_container .img_container img {
-    width: 100%;
-    top: 0;
-  }
-  body .section_container .text_container {
-    width: 100%;
-    -ms-flex-item-align: baseline;
-        align-self: baseline;
-  }
-  body .section_container .text_container p {
-    width: 100%;
-    font-size: 16px;
-  }
-  body .gallery .column {
-    width: 100%;
-  }
-  body .temas ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  body .temas ul li {
-    width: 100%;
-    padding-bottom: 30px;
-  }
-  body .call_to_action {
-    -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 100%);
-            clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 100%);
-  }
-  body .call_to_action .text_container h3 {
-    text-align: center;
+  body .mainbanner .searchBar {
+    width: 80%;
   }
   body footer {
     text-align: center;
@@ -531,15 +403,22 @@ body footer .socialmedia ul li span:hover {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  body footer .socialmedia {
+    display: block;
+  }
+  body footer .socialmedia ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 0 20px;
+  }
 }
 
 @media only screen and (min-width: 601px) {
   body .menu_mobile {
     display: none;
-  }
-  body iframe {
-    width: 100%;
-    padding: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */

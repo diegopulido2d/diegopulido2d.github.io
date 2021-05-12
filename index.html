@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Podcast Site - Diego Pulido</title>
+    <title>GIFOS Site - Diego Pulido</title>
 
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400;500;600;700&family=IBM+Plex+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/193e68cff9.css">
-    
+
+    <script src="apiReq.js"></script>
+    <script src="trendingReq.js"></script>
+
 </head>
 <body>
 
      <header>
     <nav>
         <div class="logo">
-            <a href="#"><img src="images/logo.svg" alt=""></a>
+            <a href="#"><img src="" alt=""></a>
         </div>
         <div class="menu_mobile">
             
@@ -29,116 +32,63 @@
                 
                 <div class="dropdown_menu">
                     <ul>
-                        <li><a href="#episodios">EPISODIOS</a></li>
-                        <li><a href="#nosotros">NOSOTROS</a></li>
-                        <li><a href="#entrevistas">ENTREVISTAS</a></li>
-                        <li><a href="#topicos">TÓPICOS</a></li>
+                        <li><a href="#episodios">Modo Nocturno</a></li>
+                        <li><a href="#nosotros">Favoritos</a></li>
+                        <li><a href="#entrevistas">Mis GIFOS</a></li>
                     </ul>
                 </div>
 
         </div>
         <div class="menu">
             <ul>
-                <li><a href="#episodios">EPISODIOS</a></li>
-                <li><a href="#nosotros">NOSOTROS</a></li>
-                <li><a href="#entrevistas">ENTREVISTAS</a></li>
-                <li><a href="#topicos">TÓPICOS</a></li>
+                <li><a href="#episodios"><h4>MODO NOCTURNO</h4></a></li>
+                <li><a href="#nosotros"><h4>FAVORITOS</h4></a></li>
+                <li><a href="#entrevistas"><h4>MIS GIFOS</h4></a></li>
             </ul>
         </div>
     </nav>
     </header>
     
     <section class="mainbanner">
-        <h1>Hello <span>world</span> pale blue dot.</h1>
-        <p>El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.</p>
-        <button>
-            <h4>CONOCÉ MÁS</h4>
-        </button>
-    </section>
+        <h1>Inspírate, busca, guarda, y crea <br>los mejores <b>GIFOS</b></h1>
+        <img src="./images/ilustra_header.svg" alt="">
 
-    <section id="episodios" class="episodios">
-        <h2>Episodios</h2>
-
-        <div class="podcast_container">
-        <iframe src="https://open.spotify.com/embed-podcast/show/0SAv0bEYhFndhLODSzPIfL" allow="encrypted-media"></iframe>
-        <iframe src="https://open.spotify.com/embed-podcast/show/0SAv0bEYhFndhLODSzPIfL" allow="encrypted-media"></iframe>
+        <div class="searchBar">
+            <form autocomplete="off" action="">
+                <div class="autocomplete">
+                  <input id="myInput" type="text" name="myCountry" placeholder="Busca GIFOS y más">
+                </div>
+                <i class="fa fa-search"></i>
+            </form>
         </div>
 
-        <div class="podcast_container">
-        <iframe src="https://open.spotify.com/embed-podcast/show/0SAv0bEYhFndhLODSzPIfL" allow="encrypted-media"></iframe>
-        <iframe src="https://open.spotify.com/embed-podcast/show/0SAv0bEYhFndhLODSzPIfL" allow="encrypted-media"></iframe>
+        <div class="trendingTopics">
+            <h4>Trending:</h4>
         </div>
 
     </section>
 
-    <section id="nosotros" class="section_container">
-            <div class="img_container">
-                <img src="/images/phone.png" alt="">
-            </div>
-            <div class="text_container">
-                <h3>De dónde venimos</h3>
-                <p>Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light. <br>
-                    Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.
-                </p>
-            </div>
-            <div class="text_container">
-                <br>
-                <h3>Invitadas/os estelares</h3>
-            </div> 
-    </section>
+    <section class="trendingSlider">
+        <h2>Trending GIFOS</h2>
+        <p>Mira los últimos GIFOS de nuestra comunidad</p>
 
-    <section id="entrevistas" class="gallery">
-        <div class="column"><img src="images/grace-hopper.png" alt=""></div>
-        <div class="column"><img src="images/Katie-Bouman.png" alt=""></div>
-        <div class="column"><img src="images/Margaret_Hamilton.png" alt=""></div>
-        <div class="column"><img src="images/univaccomputers.png" alt=""></div>
-        <div class="column"><img src="images/computeroperators.png" alt=""></div>
-        <div class="column"><img src="images/susan-kare.png" alt=""></div>
-    </section>
-
-    <section id="topicos" class="temas">
-        <div class="text_container">
-            <br>
-            <h3>Algunos de nuestros temas</h3>
+        <div class="trendingSliderCont">
         </div>
-        <ul>
-            <li>
-                <img src="images/icon1.svg" alt="">
-                <h5>Trabajo remoto</h5>
-            </li>
-            <li>
-                <img src="images/icon2.svg" alt="">
-                <h5>Repensando la <br>programación</h5>
-            </li>
-            <li>
-                <img src="images/icon3.svg" alt="">
-                <h5>Bases del código</h5>
-            </li>
-            <li>
-                <img src="images/icon4.svg" alt="">
-                <h5>Seguridad<br>informática</h5>
-            </li>
-        </ul>
+
     </section>
 
-    <section class="call_to_action">
-        <div class="text_container">
-            <h3>¿Querés las útimas novedades?</h3>
-            <button><h4>ESCUCHÁ LOS EPISODIOS</h4></button>
-        </div>
-    </section>
 
     <footer>
-        <p>&copy; 2019— Hello blue pale dot </p>
         <div class="socialmedia">
+            <p>Compartir en:</p>
             <ul>
-                <li><a href="https://www.spotify.com/co/home/" target="_blank"><span class="fa fa-spotify"></span></a></li>
-                <li><a href="https://www.instagram.com" target="_blank"><span class="fa fa-instagram"></span></a></li>
-                <li><a href="https://twitter.com" target="_blank"><span class="fa fa-twitter"></span></a></li>
+                
                 <li><a href="https://www.facebook.com" target="_blank"><span class="fa fa-facebook"></span></a></li>
-                <li><a href="https://web.telegram.org/#/login" target="_blank"><span class="fa fa-telegram"></span></a></li>
+                <li><a href="https://twitter.com" target="_blank"><span class="fa fa-twitter"></span></a></li>
+                <li><a href="https://www.instagram.com" target="_blank"><span class="fa fa-instagram"></span></a></li>
             </ul>
         </div>
+        <p>&copy; GIFOS 2020 All Rights Reserved. </p>
     </footer>
     
     
