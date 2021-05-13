@@ -19,7 +19,7 @@
             gifoContainer.classList.add("gifoContainer");
             const gifo = document.createElement("img");
             gifo.classList.add("gifo");
-            gifo.src = result.data[i].url;
+            gifo.src = result.data[i].images.fixed_height.url;
             gifoContainer.appendChild(gifo);
 
             const gifoOverlay = document.createElement("div");

@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/193e68cff9.css">
 
+    <script src="script.js"></script>
     <script src="apiReq.js"></script>
     <script src="trendingReq.js"></script>
 
@@ -72,7 +73,16 @@
         <h2>Trending GIFOS</h2>
         <p>Mira los últimos GIFOS de nuestra comunidad</p>
 
-        <div class="trendingSliderCont"></div>
+        <div class="trendingSliderBlock">
+            <div class="larrow" onclick="larr()">
+                <img src="images/buttons/button-slider-left.svg" alt="">
+            </div>
+            <div class="trendingSliderCont"></div>
+            <div class="rarrow" onclick="rarr()">
+                <img src="images/buttons/Button-Slider-right.svg" alt="">
+            </div>
+        </div>
+        
         
     </section>
 

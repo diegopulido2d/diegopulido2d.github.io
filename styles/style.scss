@@ -287,7 +287,66 @@ body{
                 margin: 10px 0;
             }
 
+            
+
+            .trendingSliderBlock{
+                height: 250px;
+                width: 100%;
+                margin-top: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .larrow, .rarrow{
+                    cursor: pointer;
+                }
+
+
+                .trendingSliderCont{
+                    max-width: 850px;
+                    margin: 10px;
+                    display: flex;
+                    flex-direction: row;
+                    overflow: hidden;
+
+                    .trendingGifoCard{
+                        position: relative;
+                        margin: 10px;
+
+                        .gifoOverlay{
+                            position: absolute;
+                            top:0;
+                            height: 98%;
+                            width: 100%;
+                            color: transparent;
+                            color: transparent;
+
+                            h4, h5{
+                                padding: 0 10px;
+                            }
+
+                            h5{
+                                padding-top: 50px;
+                            }
+
+
+                        }
+                    }
+
+                    .trendingGifoCard:hover .gifoOverlay{
+                        color: white;
+                        background-color: rgba(86, 46, 229, 0.7);
+                        transition: 0.2s;
+                    }
+
+
+            }
         }
+
+
+        }
+
+        
 
 
 

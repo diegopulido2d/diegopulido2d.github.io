@@ -316,6 +316,67 @@ body .trendingSlider h2 {
   margin: 10px 0;
 }
 
+body .trendingSlider .trendingSliderBlock {
+  height: 250px;
+  width: 100%;
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .trendingSlider .trendingSliderBlock .larrow, body .trendingSlider .trendingSliderBlock .rarrow {
+  cursor: pointer;
+}
+
+body .trendingSlider .trendingSliderBlock .trendingSliderCont {
+  max-width: 850px;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow: hidden;
+}
+
+body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard {
+  position: relative;
+  margin: 10px;
+}
+
+body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard .gifoOverlay {
+  position: absolute;
+  top: 0;
+  height: 98%;
+  width: 100%;
+  color: transparent;
+  color: transparent;
+}
+
+body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard .gifoOverlay h4, body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard .gifoOverlay h5 {
+  padding: 0 10px;
+}
+
+body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard .gifoOverlay h5 {
+  padding-top: 50px;
+}
+
+body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard:hover .gifoOverlay {
+  color: white;
+  background-color: rgba(86, 46, 229, 0.7);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
 body footer {
   padding: 25px 80px;
   display: -webkit-box;
