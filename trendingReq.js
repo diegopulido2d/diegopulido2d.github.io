@@ -1,7 +1,7 @@
     // TRENDING GIFOS
 
     const apiKey1= 'f7Vi6MThkVsup5hqnFvUaOhAlxZ7RAtg'
-    const trendingGifosReq = 'http://api.giphy.com/v1/gifs/trending?api_key='+apiKey1; 
+    const trendingGifosReq = 'https://api.giphy.com/v1/gifs/trending?api_key='+apiKey1; 
 
     
     fetch(trendingGifosReq, {
