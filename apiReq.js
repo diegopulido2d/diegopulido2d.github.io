@@ -1,7 +1,7 @@
     //TRENDING TOPICS
 
     const apiKey= 'DvXspQNW16DQZwZ7HNMM2CUYkkHBiXHO'
-    const trendingTopicsReq = 'https://api.giphy.com/v1/trending/searches?api_key='+apiKey; 
+    const trendingTopicsReq = 'http://api.giphy.com/v1/trending/searches?api_key='+apiKey; 
 
     fetch(trendingTopicsReq)
     .then(response => response.json())
