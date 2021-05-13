@@ -30,14 +30,41 @@
             const gifoTitle = document.createElement("h4");
             gifoTitle.classList.add("gifoTitle");
             gifoTitle.innerHTML= result.data[i].title;
+
+
+            const gifoOverlayAct = document.createElement("div");
+            gifoOverlayAct.classList.add("gifoOverlayAct");
+
+            const gifoFav = document.createElement("a");
+            const gifoFavImg = document.createElement("img");
+            gifoFavImg.src = "images/icons/icon-fav.svg";
+            gifoFav.appendChild(gifoFavImg);
+            gifoFav.classList.add("gifoFav");
+
+            const gifoDwnld = document.createElement("a");
+            const gifoDwnldImg = document.createElement("img");
+            gifoDwnldImg.src = "images/icons/icon-download.svg";
+            gifoDwnld.appendChild(gifoDwnldImg);
+            gifoDwnld.classList.add("gifoDwnld");
+
+            const gifoExp = document.createElement("a");
+            const gifoExpImg = document.createElement("img");
+            gifoExpImg.src = "images/icons/icon-max-normal.svg";
+            gifoExp.appendChild(gifoExpImg);
+            gifoExp.classList.add("gifoExp");
+
+            gifoOverlayAct.appendChild(gifoFav);
+            gifoOverlayAct.appendChild(gifoDwnld);
+            gifoOverlayAct.appendChild(gifoExp);
+
+            gifoOverlay.appendChild(gifoOverlayAct);
             gifoOverlay.appendChild(gifoUser);
             gifoOverlay.appendChild(gifoTitle);
 
             trendingGifoCard.appendChild(gifoContainer);
             trendingGifoCard.appendChild(gifoOverlay);
-            trendingSliderCont.appendChild(trendingGifoCard);
 
-            //document.getElementByClassName("gifo").src = result.data[i].url;
+            trendingSliderCont.appendChild(trendingGifoCard);
 
         }
     })

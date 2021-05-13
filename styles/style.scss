@@ -303,7 +303,7 @@ body{
 
 
                 .trendingSliderCont{
-                    max-width: 850px;
+                    max-width: 900px;
                     margin: 10px;
                     display: flex;
                     flex-direction: row;
@@ -326,8 +326,17 @@ body{
                             }
 
                             h5{
-                                padding-top: 50px;
+                                padding-top: 20px;
                             }
+
+                        .gifoOverlayAct{
+                           display: none;
+
+                            a{
+                                padding:6px 3px;
+                            }
+
+                        }
 
 
                         }
@@ -337,6 +346,12 @@ body{
                         color: white;
                         background-color: rgba(86, 46, 229, 0.7);
                         transition: 0.2s;
+                    }
+
+                    .trendingGifoCard:hover .gifoOverlay .gifoOverlayAct{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-end;
                     }
 
 

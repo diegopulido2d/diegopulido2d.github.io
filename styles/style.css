@@ -336,7 +336,7 @@ body .trendingSlider .trendingSliderBlock .larrow, body .trendingSlider .trendin
 }
 
 body .trendingSlider .trendingSliderBlock .trendingSliderCont {
-  max-width: 850px;
+  max-width: 900px;
   margin: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -367,7 +367,15 @@ body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard 
 }
 
 body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard .gifoOverlay h5 {
-  padding-top: 50px;
+  padding-top: 20px;
+}
+
+body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard .gifoOverlay .gifoOverlayAct {
+  display: none;
+}
+
+body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard .gifoOverlay .gifoOverlayAct a {
+  padding: 6px 3px;
 }
 
 body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard:hover .gifoOverlay {
@@ -375,6 +383,19 @@ body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard:
   background-color: rgba(86, 46, 229, 0.7);
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard:hover .gifoOverlay .gifoOverlayAct {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 body footer {
