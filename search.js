@@ -1,7 +1,7 @@
 //SEARCHBAR REQUEST
 
       
-const endpoint_search = "http://api.giphy.com/v1/gifs/search";
+const endpoint_search = "https://api.giphy.com/v1/gifs/search";
 const api_key = "6AZdbonZwDZz5GrFbGYYjcdUgZ6UwrPB";
 let limit = 12;
 let offset = 0;
