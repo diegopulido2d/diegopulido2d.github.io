@@ -10,10 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/193e68cff9.css">
 
-    <script src="script.js"></script>
-    <script src="apiReq.js"></script>
-    <script src="trendingReq.js"></script>
-
 </head>
 <body>
 
@@ -57,15 +53,17 @@
         <div class="searchBar">
             <form autocomplete="off" action="">
                 <div class="autocomplete">
-                  <input id="myInput" type="text" name="myCountry" placeholder="Busca GIFOS y más">
+                  <input id="myInput" class="searchBox" type="text" placeholder="Busca GIFOS y más">
                 </div>
-                <i class="fa fa-search"></i>
+                <i class="fa fa-search searchBtn"></i>
             </form>
         </div>
 
         <div class="trendingTopics">
             <h4>Trending:</h4>
         </div>
+
+        <div id="searchResult"></div>
 
     </section>
 
@@ -98,6 +96,11 @@
         </div>
         <p>&copy; GIFOS 2020 All Rights Reserved. </p>
     </footer>
+
+    <script src="script.js"></script>
+    <script src="search.js"></script>
+    <script src="apiReq.js"></script>
+    <script src="trendingReq.js"></script>
     
     
 </body>

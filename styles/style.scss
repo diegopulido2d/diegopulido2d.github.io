@@ -275,6 +275,22 @@ body{
 
         }
 
+        #searchResult{
+            margin-bottom: 80px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            img{
+                margin: 10px 10px;
+            }
+        }
+
+
+        .searchBtn{
+            cursor: pointer;
+        }
+
         .trendingSlider{
             padding: 40px 0;
             background-color: #F3F5F8;

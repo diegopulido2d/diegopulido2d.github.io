@@ -296,6 +296,26 @@ body .mainbanner .trendingTopics h4, body .mainbanner .trendingTopics span {
   margin: 10px 0;
 }
 
+body #searchResult {
+  margin-bottom: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #searchResult img {
+  margin: 10px 10px;
+}
+
+body .searchBtn {
+  cursor: pointer;
+}
+
 body .trendingSlider {
   padding: 40px 0;
   background-color: #F3F5F8;
