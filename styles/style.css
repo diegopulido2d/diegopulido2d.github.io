@@ -131,13 +131,6 @@ body nav ul li a:hover {
   transition: 0.1s;
 }
 
-body nav ul li a:active {
-  text-decoration: line-through;
-  color: rgba(6, 10, 36, 0.56);
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-
 body .dropdown_menu {
   position: absolute;
   top: -80px;
@@ -356,7 +349,7 @@ body .trendingSlider .trendingSliderBlock .larrow, body .trendingSlider .trendin
 }
 
 body .trendingSlider .trendingSliderBlock .trendingSliderCont {
-  max-width: 900px;
+  width: 900px;
   margin: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -394,8 +387,9 @@ body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard 
   display: none;
 }
 
-body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard .gifoOverlay .gifoOverlayAct a {
+body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard .gifoOverlay .gifoOverlayAct span {
   padding: 6px 3px;
+  cursor: pointer;
 }
 
 body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard:hover .gifoOverlay {
@@ -416,6 +410,27 @@ body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard:
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+body .imgExpandidaDet {
+  margin-top: 50px;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .imgExpandidaDet .imgExpandidaInfo h4, body .imgExpandidaDet h5 {
+  margin: 0;
 }
 
 body footer {
@@ -522,5 +537,88 @@ body footer .socialmedia ul li span:hover {
   body .menu_mobile {
     display: none;
   }
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: white;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  height: 100%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: #572EE5;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: light;
+}
+
+.close:hover,
+.close:focus {
+  color: #572EE5;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: #572EE5;
+  font-weight: bold;
+  font-size: 20px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 /*# sourceMappingURL=style.css.map */

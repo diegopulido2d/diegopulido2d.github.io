@@ -17,7 +17,8 @@ const searchEndpoint = async (q, offset) => {
 const createImages = (images) => {
   for (let index = 0; index < images.data.length; index++) {
     const image = document.createElement("img");
-    image.src = images.data[index].images.fixed_height.url;
+    image.src = images.data[index].images.original.url;
+    console.log(images.data[index].images);
     document.getElementById("searchResult").appendChild(image);
   }
 };
