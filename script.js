@@ -23,7 +23,6 @@ function rarr() {
 
 
 
-
 // MODAL
 
 function openModal() {

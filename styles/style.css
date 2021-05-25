@@ -290,7 +290,6 @@ body .mainbanner .trendingTopics h4, body .mainbanner .trendingTopics span {
 }
 
 body #searchResult {
-  margin-bottom: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -303,6 +302,10 @@ body #searchResult {
 
 body #searchResult img {
   margin: 10px 10px;
+}
+
+body #verMasCont {
+  padding: 30px 0 60px 0;
 }
 
 body .searchBtn {
@@ -537,6 +540,45 @@ body footer .socialmedia ul li span:hover {
   body .menu_mobile {
     display: none;
   }
+}
+
+.noResult {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.noResult h4 {
+  color: #50E3C2;
+}
+
+.verMasBtn {
+  background-color: transparent;
+  border: 1px solid #572EE5;
+  border-radius: 40px;
+  text-transform: uppercase;
+  color: #572EE5;
+  padding: 15px 30px 15px 30px;
+  font-weight: 600;
+  font-size: 12px;
+  font-family: 'Montserrat', serif;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.verMasBtn:hover {
+  background-color: #572EE5;
+  color: white;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 /* The Modal (background) */
