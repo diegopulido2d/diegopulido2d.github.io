@@ -171,11 +171,6 @@ body .text_container p {
   font-size: 11px;
 }
 
-body section {
-  position: relative;
-  padding: 0 150px;
-}
-
 body .mainbanner {
   padding-top: 50px;
   display: -webkit-box;
@@ -298,10 +293,7 @@ body #searchResult {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-body #searchResult img {
-  margin: 10px 10px;
+  padding: 0 60px;
 }
 
 body #verMasCont {
