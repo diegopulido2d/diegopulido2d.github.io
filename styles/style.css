@@ -364,12 +364,12 @@ body .trendingSlider .trendingSliderBlock .trendingSliderCont {
   overflow: hidden;
 }
 
-body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard {
+body .gifoCard {
   position: relative;
   margin: 10px;
 }
 
-body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard .gifoOverlay {
+body .gifoCard .gifoOverlay {
   position: absolute;
   top: 0;
   height: 98%;
@@ -378,31 +378,31 @@ body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard 
   color: transparent;
 }
 
-body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard .gifoOverlay h4, body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard .gifoOverlay h5 {
+body .gifoCard .gifoOverlay h4, body .gifoCard .gifoOverlay h5 {
   padding: 0 10px;
 }
 
-body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard .gifoOverlay h5 {
+body .gifoCard .gifoOverlay h5 {
   padding-top: 20px;
 }
 
-body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard .gifoOverlay .gifoOverlayAct {
+body .gifoCard .gifoOverlay .gifoOverlayAct {
   display: none;
 }
 
-body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard .gifoOverlay .gifoOverlayAct span {
+body .gifoCard .gifoOverlay .gifoOverlayAct span {
   padding: 6px 3px;
   cursor: pointer;
 }
 
-body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard:hover .gifoOverlay {
+body .gifoCard:hover .gifoOverlay {
   color: white;
   background-color: rgba(86, 46, 229, 0.7);
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
-body .trendingSlider .trendingSliderBlock .trendingSliderCont .trendingGifoCard:hover .gifoOverlay .gifoOverlayAct {
+body .gifoCard:hover .gifoOverlay .gifoOverlayAct {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

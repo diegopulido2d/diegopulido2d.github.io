@@ -323,58 +323,61 @@ body{
                     flex-direction: row;
                     overflow: hidden;
 
-                    .trendingGifoCard{
-                        position: relative;
-                        margin: 10px;
+            }
+        }
 
-                        .gifoOverlay{
-                            position: absolute;
-                            top:0;
-                            height: 98%;
-                            width: 100%;
-                            color: transparent;
-                            color: transparent;
-
-                            h4, h5{
-                                padding: 0 10px;
-                            }
-
-                            h5{
-                                padding-top: 20px;
-                            }
-
-                        .gifoOverlayAct{
-                           display: none;
-
-                            span{
-                                padding:6px 3px;
-                                cursor: pointer;
-                            }
-
-                        }
+        }
 
 
-                        }
-                    }
 
-                    .trendingGifoCard:hover .gifoOverlay{
-                        color: white;
-                        background-color: rgba(86, 46, 229, 0.7);
-                        transition: 0.2s;
-                    }
 
-                    .trendingGifoCard:hover .gifoOverlay .gifoOverlayAct{
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: flex-end;
-                    }
+        .gifoCard{
+            position: relative;
+            margin: 10px;
+
+            .gifoOverlay{
+                position: absolute;
+                top:0;
+                height: 98%;
+                width: 100%;
+                color: transparent;
+                color: transparent;
+
+                h4, h5{
+                    padding: 0 10px;
+                }
+
+                h5{
+                    padding-top: 20px;
+                }
+
+            .gifoOverlayAct{
+               display: none;
+
+                span{
+                    padding:6px 3px;
+                    cursor: pointer;
+                }
+
+            }
 
 
             }
         }
 
-
+        .gifoCard:hover .gifoOverlay{
+            color: white;
+            background-color: rgba(86, 46, 229, 0.7);
+            transition: 0.2s;
         }
+
+        .gifoCard:hover .gifoOverlay .gifoOverlayAct{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+
 
         .imgExpandidaDet{
             margin-top: 50px;

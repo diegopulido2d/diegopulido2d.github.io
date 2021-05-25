@@ -17,9 +17,62 @@ const searchEndpoint = async (q, offset) => {
 
 const createImages = (images) => {
   for (let index = 0; index < images.data.length; index++) {
-    const image = document.createElement("img");
-    image.src = images.data[index].images.fixed_height.url;
-    document.getElementById("searchResult").appendChild(image);
+
+    const gifo = document.createElement("img");
+    gifo.classList.add('gifo');
+    gifo.src = images.data[index].images.fixed_height.url;
+
+    const iconfav = document.createElement("img");
+    iconfav.src = "images/icons/icon-fav.svg";
+    const iconDwnld = document.createElement("img");
+    iconDwnld.src = "images/icons/icon-download.svg";
+    const iconexp = document.createElement("img");
+    iconexp.src = "images/icons/icon-max-normal.svg";
+
+    const gifoFav = document.createElement('span');
+    gifoFav.classList.add('gifoFav');
+    const gifoDwnld = document.createElement('span');
+    gifoDwnld.classList.add('gifoDwnld');
+    const gifoExp = document.createElement('span');
+    gifoExp.classList.add('gifoExp');
+
+    const gifoCard = document.createElement('div');
+    gifoCard.classList.add('gifoCard');
+    const gifoContainer = document.createElement('div');
+    gifoContainer.classList.add('gifoContainer');
+    const gifoOverlay = document.createElement('div');
+    gifoOverlay.classList.add('gifoOverlay');
+    const gifoOverlayAct = document.createElement('div');
+    gifoOverlayAct.classList.add('gifoOverlayAct');
+
+    const gifoUser = document.createElement('h5');
+    gifoUser.classList.add('gifoUser');
+    gifoUser.innerHTML= images.data[index].username;
+    const gifoTitle = document.createElement('h4');
+    gifoTitle.innerHTML= images.data[index].title;
+    gifoTitle.classList.add('gifoTitle');
+
+    gifoFav.appendChild(iconfav);
+    gifoDwnld.appendChild(iconDwnld);
+    gifoExp.appendChild(iconexp);
+
+    gifoOverlayAct.appendChild(gifoFav);
+    gifoOverlayAct.appendChild(gifoDwnld);
+    gifoOverlayAct.appendChild(gifoExp);
+
+    gifoOverlay.appendChild(gifoOverlayAct);
+    gifoOverlay.appendChild(gifoUser);
+    gifoOverlay.appendChild(gifoTitle);
+
+    gifoContainer.appendChild(gifo);
+
+    gifoCard.appendChild(gifoContainer);
+    gifoCard.appendChild(gifoOverlay);
+    
+
+    document.getElementById("searchResult").appendChild(gifoCard);
+
+
 
     if((12 - index) == 1){
       document.getElementById("verMasCont").innerHTML = '';
