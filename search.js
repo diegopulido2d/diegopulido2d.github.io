@@ -7,9 +7,9 @@ let limit = 12;
 let offset = 0;
 let busqueda = '';
 
-let cont = 0;
 
-var favs = [];
+let favs2 = [];
+let cont = 0;
 
 
 const searchEndpoint = async (q, offset) => {
@@ -30,11 +30,11 @@ const createImages = (images) => {
       title: ''
    }
 
-    favs.push(favorito);
-
-    favs[index].gifo = images.data[index].images.fixed_height.url;
-    favs[index].username = images.data[index].username;
-    favs[index].title = images.data[index].title;
+    favs2.push(favorito);
+    
+    favs2[cont].gifo = images.data[index].images.fixed_height.url;
+    favs2[cont].username = images.data[index].username;
+    favs2[cont].title = images.data[index].title; 
 
 
     // SEARCH CARDS
@@ -52,7 +52,7 @@ const createImages = (images) => {
 
     const gifoFav = document.createElement('span');
     gifoFav.classList.add('gifoFav');
-    gifoFav.setAttribute("onclick","gifoFavoritoSearch("+(index)+")");
+    gifoFav.setAttribute("onclick","gifoFavoritoSearch("+(cont)+")");
     const gifoDwnld = document.createElement('span');
     gifoDwnld.classList.add('gifoDwnld');
     const gifoExp = document.createElement('span');
@@ -135,7 +135,7 @@ const createImages = (images) => {
 
     const imgExpGifoFav = document.createElement('span');
     imgExpGifoFav.classList.add('imgExpGifoFav');
-    imgExpGifoFav.setAttribute("onclick","gifoFavoritoSearch("+(index)+")");
+    imgExpGifoFav.setAttribute("onclick","gifoFavoritoSearch("+(cont)+")");
     const imgExpGifoDwld = document.createElement('span');
     imgExpGifoDwld.classList.add('imgExpGifoDwld');
 
@@ -170,15 +170,6 @@ const createImages = (images) => {
   }
 
 
-
-  var searchCardTot = document.getElementsByClassName("searchCard");
-  console.log(searchCardTot.length);
-
-  var gifoCardTot = document.getElementsByClassName("gifoCard");
-  console.log(gifoCardTot.length);
-
-
-
   // SIN RESULTADO
 
 
@@ -202,8 +193,7 @@ const createImages = (images) => {
 
 
 function gifoFavoritoSearch(n){
-  console.log(favs[n]);
-  localStorage.setItem('favoritoSearch'+n, JSON.stringify(favs[n]));
+  localStorage.setItem('favoritoSearch'+n, JSON.stringify(favs2[n]));
 }
 
 
