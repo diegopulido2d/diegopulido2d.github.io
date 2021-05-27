@@ -30,7 +30,7 @@
                 <div class="dropdown_menu">
                     <ul>
                         <li><a href="#episodios">Modo Nocturno</a></li>
-                        <li><a href="favoritos.html">Favoritos</a></li>
+                        <li><a href="#nosotros">Favoritos</a></li>
                         <li><a href="#entrevistas">Mis GIFOS</a></li>
                     </ul>
                 </div>
@@ -39,7 +39,7 @@
         <div class="menu">
             <ul>
                 <li><a href="#episodios"><h4>MODO NOCTURNO</h4></a></li>
-                <li><a href="favoritos.html"><h4>FAVORITOS</h4></a></li>
+                <li><a href="#nosotros"><h4>FAVORITOS</h4></a></li>
                 <li><a href="#entrevistas"><h4>MIS GIFOS</h4></a></li>
             </ul>
         </div>
@@ -50,20 +50,8 @@
         <h1>Inspírate, busca, guarda, y crea <br>los mejores <b>GIFOS</b></h1>
         <img src="./images/ilustra_header.svg" alt="">
 
-        <div class="searchBar">
-            <form autocomplete="off" action="">
-                <div class="autocomplete">
-                  <input id="myInput" class="searchBox" type="text" placeholder="Busca GIFOS y más">
-                </div>
-                <i class="fa fa-search searchBtn"></i>
-            </form>
-        </div>
 
-        <div class="trendingTopics">
-            <h4>Trending:</h4>
-        </div>
-
-        <div id="searchResult"></div>
+        <div id="favResult"></div>
         <div id="verMasCont"></div>
 
     </section>
@@ -100,9 +88,9 @@
             </div>
         </div>
 
-        <div id="modal2" class="modal">
-            <span class="close cursor" onclick="closeModal2()">&times;</span>
-            <div class="modal-content2">
+        <div id="modal3" class="modal">
+            <span class="close cursor" onclick="closeModal3()">&times;</span>
+            <div class="modal-content3">
         
             <!-- Next/previous controls -->
             <a class="prev" onclick="plusSlides(-1)"><img src="images/buttons/button-slider-left.svg" alt=""></a>
@@ -126,8 +114,7 @@
     </footer>
 
     <script src="script.js"></script>
-    <script src="search.js"></script>
-    <script src="apiReq.js"></script>
+    <script src="favs.js"></script>
     <script src="trendingReq.js"></script>
     
     

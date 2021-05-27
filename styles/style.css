@@ -569,7 +569,6 @@ body footer .socialmedia ul li span:hover {
   transition: 0.2s;
 }
 
-/* The Modal (background) */
 .modal {
   display: none;
   position: fixed;
@@ -582,7 +581,6 @@ body footer .socialmedia ul li span:hover {
   background-color: white;
 }
 
-/* Modal Content */
 .modal-content {
   position: relative;
   margin: auto;
@@ -592,7 +590,15 @@ body footer .socialmedia ul li span:hover {
   max-width: 1200px;
 }
 
-/* The Close Button */
+.modal-content2 {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  height: 100%;
+  max-width: 1200px;
+}
+
 .close {
   color: #572EE5;
   position: absolute;
@@ -610,7 +616,22 @@ body footer .socialmedia ul li span:hover {
 }
 
 /* Hide the slides by default */
-.mySlides {
+.slides {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.searchCard {
   display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;

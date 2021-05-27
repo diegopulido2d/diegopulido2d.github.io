@@ -529,7 +529,6 @@ body{
 
 
   
-  /* The Modal (background) */
   .modal {
     display: none;
     position: fixed;
@@ -542,7 +541,7 @@ body{
     background-color: white;
   }
   
-  /* Modal Content */
+
   .modal-content {
     position: relative;
     margin: auto;
@@ -551,8 +550,18 @@ body{
     height: 100%;
     max-width: 1200px;
   }
+
+
+  .modal-content2 {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    height: 100%;
+    max-width: 1200px;
+  }
   
-  /* The Close Button */
+
   .close {
     color: #572EE5;
     position: absolute;
@@ -570,13 +579,21 @@ body{
   }
   
   /* Hide the slides by default */
-  .mySlides {
+  .slides {
     display: none;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     height: 100%;
-  }
+    }
+
+  .searchCard {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+   }
   
   /* Next & previous buttons */
   .prev,

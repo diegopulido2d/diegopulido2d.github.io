@@ -2,7 +2,7 @@
 
       
 const endpoint_search = "https://api.giphy.com/v1/gifs/search";
-const api_key = "6AZdbonZwDZz5GrFbGYYjcdUgZ6UwrPB";
+const api_key = "y98WtYPNJhbNhdf7rKQmng8kAOB9pwaU";
 let limit = 12;
 let offset = 0;
 let busqueda = '';
@@ -35,6 +35,7 @@ const createImages = (images) => {
     gifoDwnld.classList.add('gifoDwnld');
     const gifoExp = document.createElement('span');
     gifoExp.classList.add('gifoExp');
+    gifoExp.setAttribute("onclick","openModal2("+(index)+")");
 
     const gifoCard = document.createElement('div');
     gifoCard.classList.add('gifoCard');
@@ -68,11 +69,8 @@ const createImages = (images) => {
 
     gifoCard.appendChild(gifoContainer);
     gifoCard.appendChild(gifoOverlay);
-    
 
     document.getElementById("searchResult").appendChild(gifoCard);
-
-
 
     if((12 - index) == 1){
       document.getElementById("verMasCont").innerHTML = '';
@@ -90,6 +88,60 @@ const createImages = (images) => {
       });
 
     }
+
+    // SEARCH CARD MODALS
+
+    const searchCard = document.createElement('div');
+    searchCard.classList.add('searchCard');
+    const imgExpandidaDet = document.createElement('div');
+    imgExpandidaDet.classList.add('imgExpandidaDet');
+    const imgExpandidaInfo = document.createElement('div');
+    imgExpandidaInfo.classList.add('imgExpandidaInfo');
+    const imgExpandidaAct = document.createElement('div');
+    imgExpandidaAct.classList.add('imgExpandidaAct');
+
+    const imgExpandida = document.createElement('img');
+    imgExpandida.src = images.data[index].images.original.url;
+    imgExpandida.classList.add('imgExpandida');
+    const imgExpFav = document.createElement('img');
+    imgExpFav.src = "images/icons/icon-fav.svg";
+    const imgExpDwnld = document.createElement('img');
+    imgExpDwnld.src = "images/icons/icon-download.svg";
+
+    const imgExpGifoFav = document.createElement('span');
+    imgExpGifoFav.classList.add('imgExpGifoFav');
+    const imgExpGifoDwld = document.createElement('span');
+    imgExpGifoDwld.classList.add('imgExpGifoDwld');
+
+    const imgExpandidaUser = document.createElement('h5');
+    imgExpandidaUser.classList.add('imgExpandidaUser');
+    imgExpandidaUser.innerHTML = images.data[index].username;
+    const imgExpandidaTitle = document.createElement('h4');
+    imgExpandidaTitle.classList.add('imgExpandidaTitle');
+    imgExpandidaTitle.innerHTML= images.data[index].title;
+
+
+    imgExpGifoFav.appendChild(imgExpFav);
+    imgExpGifoDwld.appendChild(imgExpDwnld);
+
+    imgExpandidaAct.appendChild(imgExpGifoFav);
+    imgExpandidaAct.appendChild(imgExpGifoDwld);
+
+    imgExpandidaInfo.appendChild(imgExpandidaUser);
+    imgExpandidaInfo.appendChild(imgExpandidaTitle);
+
+    imgExpandidaDet.appendChild(imgExpandidaInfo);
+    imgExpandidaDet.appendChild(imgExpandidaAct);
+
+    searchCard.appendChild(imgExpandida);
+    searchCard.appendChild(imgExpandidaDet);
+
+
+    document.getElementsByClassName("modal-content2")[0].appendChild(searchCard);
+
+
+
+
 
   }
 
@@ -121,3 +173,29 @@ button.addEventListener("click", async () => {
 });
 
 
+
+
+
+  // MODAL
+
+  function openModal2(a){
+    document.getElementById("modal2").style.display = "block";
+    console.log(a);
+    showSearch(a);
+  }
+
+  function closeModal2() {
+    document.getElementById("modal2").style.display = "none";
+  }
+
+
+  function showSearch(n) {
+    
+    var searchCard = document.getElementsByClassName("searchCard");
+
+    for (var i = 0; i < searchCard.length; i++) {
+    searchCard[i].style.display = "none";
+    }
+
+    searchCard[n].style.display = "flex";
+  }
