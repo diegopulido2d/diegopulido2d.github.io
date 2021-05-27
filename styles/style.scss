@@ -321,7 +321,7 @@ body{
 
 
 
-        .gifoCard{
+        .gifoCard, .gifoCardTrending{
             position: relative;
             margin: 10px;
 
@@ -366,6 +366,33 @@ body{
             flex-direction: row;
             justify-content: flex-end;
         }
+
+
+        .gifoCardTrending:hover .gifoOverlay{
+            color: white;
+            background-color: rgba(86, 46, 229, 0.7);
+            transition: 0.2s;
+        }
+
+        .gifoCardTrending:hover .gifoOverlay .gifoOverlayAct{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

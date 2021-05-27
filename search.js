@@ -7,6 +7,11 @@ let limit = 12;
 let offset = 0;
 let busqueda = '';
 
+let cont = 0;
+
+var favs = [];
+
+
 const searchEndpoint = async (q, offset) => {
   const data = await fetch(
     `${endpoint_search}?api_key=${api_key}&q=${q}&limit=${limit}&offset=${offset}`
@@ -17,6 +22,22 @@ const searchEndpoint = async (q, offset) => {
 
 const createImages = (images) => {
   for (let index = 0; index < images.data.length; index++) {
+
+
+    var favorito = {
+      gifo: '',
+      username: '',
+      title: ''
+   }
+
+    favs.push(favorito);
+
+    favs[index].gifo = images.data[index].images.fixed_height.url;
+    favs[index].username = images.data[index].username;
+    favs[index].title = images.data[index].title;
+
+
+    // SEARCH CARDS
 
     const gifo = document.createElement("img");
     gifo.classList.add('gifo');
@@ -31,11 +52,12 @@ const createImages = (images) => {
 
     const gifoFav = document.createElement('span');
     gifoFav.classList.add('gifoFav');
+    gifoFav.setAttribute("onclick","gifoFavoritoSearch("+(index)+")");
     const gifoDwnld = document.createElement('span');
     gifoDwnld.classList.add('gifoDwnld');
     const gifoExp = document.createElement('span');
     gifoExp.classList.add('gifoExp');
-    gifoExp.setAttribute("onclick","openModal2("+(index)+")");
+    gifoExp.setAttribute("onclick","openModal2("+(cont)+")");
 
     const gifoCard = document.createElement('div');
     gifoCard.classList.add('gifoCard');
@@ -71,6 +93,9 @@ const createImages = (images) => {
     gifoCard.appendChild(gifoOverlay);
 
     document.getElementById("searchResult").appendChild(gifoCard);
+
+
+    //VER MAS BOTON
 
     if((12 - index) == 1){
       document.getElementById("verMasCont").innerHTML = '';
@@ -110,6 +135,7 @@ const createImages = (images) => {
 
     const imgExpGifoFav = document.createElement('span');
     imgExpGifoFav.classList.add('imgExpGifoFav');
+    imgExpGifoFav.setAttribute("onclick","gifoFavoritoSearch("+(index)+")");
     const imgExpGifoDwld = document.createElement('span');
     imgExpGifoDwld.classList.add('imgExpGifoDwld');
 
@@ -139,11 +165,22 @@ const createImages = (images) => {
 
     document.getElementsByClassName("modal-content2")[0].appendChild(searchCard);
 
-
-
-
+    cont++;
 
   }
+
+
+
+  var searchCardTot = document.getElementsByClassName("searchCard");
+  console.log(searchCardTot.length);
+
+  var gifoCardTot = document.getElementsByClassName("gifoCard");
+  console.log(gifoCardTot.length);
+
+
+
+  // SIN RESULTADO
+
 
   if (images.data.length == 0){
     document.getElementById("searchResult").innerHTML = '';
@@ -161,6 +198,18 @@ const createImages = (images) => {
 };
 
 
+// GIFO FAVORITO
+
+
+function gifoFavoritoSearch(n){
+  console.log(favs[n]);
+  localStorage.setItem('favoritoSearch'+n, JSON.stringify(favs[n]));
+}
+
+
+
+// BOTON DE BUSQUEDA  
+
 const button = document.getElementsByClassName('searchBtn')[0];
 button.addEventListener("click", async () => {
   offset += limit + 1;
@@ -168,6 +217,7 @@ button.addEventListener("click", async () => {
   busqueda = texto;
   document.getElementById("searchResult").innerHTML = '';
   document.getElementById("verMasCont").innerHTML = '';
+  document.getElementsByClassName("modal-content2")[0].innerHTML = '';
   const images = await searchEndpoint(texto, offset);
   createImages(images);
 });
@@ -180,7 +230,6 @@ button.addEventListener("click", async () => {
 
   function openModal2(a){
     document.getElementById("modal2").style.display = "block";
-    console.log(a);
     showSearch(a);
   }
 
@@ -199,3 +248,6 @@ button.addEventListener("click", async () => {
 
     searchCard[n].style.display = "flex";
   }
+
+
+  

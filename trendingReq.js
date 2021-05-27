@@ -3,6 +3,9 @@
     const apiKey1= 'f7Vi6MThkVsup5hqnFvUaOhAlxZ7RAtg'
     const trendingGifosReq = 'https://api.giphy.com/v1/gifs/trending?api_key='+apiKey1; 
 
+
+    var favs = [];
+    
     
     fetch(trendingGifosReq, {
         method: 'GET'
@@ -10,6 +13,19 @@
     .then(response => response.json())
     .then(result => {
         for (i = 0; i < 5; i++){
+
+      
+            var favorito = {
+                gifo: '',
+                username: '',
+                title: ''
+            }
+
+            favs.push(favorito);
+
+            favs[i].gifo = result.data[i].images.fixed_height.url;
+            favs[i].username = result.data[i].username;
+            favs[i].title = result.data[i].title;
 
 
             // TRENDING CARDS
@@ -27,6 +43,7 @@
 
             const gifoFav = document.createElement('span');
             gifoFav.classList.add('gifoFav');
+            gifoFav.setAttribute("onclick","gifoFavoritoTrending("+(i)+")");
             const gifoDwnld = document.createElement('span');
             gifoDwnld.classList.add('gifoDwnld');
             const gifoExp = document.createElement('span');
@@ -34,8 +51,8 @@
             gifoExp.setAttribute("onclick","openModal("+(i)+")");
 
 
-            const gifoCard = document.createElement('div');
-            gifoCard.classList.add('gifoCard');
+            const gifoCardTrending = document.createElement('div');
+            gifoCardTrending.classList.add('gifoCardTrending');
             const gifoContainer = document.createElement('div');
             gifoContainer.classList.add('gifoContainer');
             const gifoOverlay = document.createElement('div');
@@ -64,10 +81,10 @@
 
             gifoContainer.appendChild(gifo);
 
-            gifoCard.appendChild(gifoContainer);
-            gifoCard.appendChild(gifoOverlay);
+            gifoCardTrending.appendChild(gifoContainer);
+            gifoCardTrending.appendChild(gifoOverlay);
 
-            document.getElementById("trendingSliderCont").appendChild(gifoCard);
+            document.getElementById("trendingSliderCont").appendChild(gifoCardTrending);
 
 
 
@@ -92,6 +109,7 @@
 
             const imgExpGifoFav = document.createElement('span');
             imgExpGifoFav.classList.add('imgExpGifoFav');
+            imgExpGifoFav.setAttribute("onclick","gifoFavoritoTrending("+(i)+")");
             const imgExpGifoDwld = document.createElement('span');
             imgExpGifoDwld.classList.add('imgExpGifoDwld');
 
@@ -129,6 +147,12 @@
 
 
 
+    // GIFO FAVORITO TRENDING
+ 
+    function gifoFavoritoTrending(n){
+        console.log(favs[n]);
+        localStorage.setItem('favoritoTrending'+n, JSON.stringify(favs[n]));
+    }
 
 
 
@@ -137,7 +161,6 @@
 
     function openModal(a){
         document.getElementById("modal").style.display = "block";
-        console.log(a);
         showSlides(a);
     }
     

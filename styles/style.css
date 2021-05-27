@@ -352,12 +352,12 @@ body .trendingSlider .trendingSliderBlock .trendingSliderCont {
   overflow: hidden;
 }
 
-body .gifoCard {
+body .gifoCard, body .gifoCardTrending {
   position: relative;
   margin: 10px;
 }
 
-body .gifoCard .gifoOverlay {
+body .gifoCard .gifoOverlay, body .gifoCardTrending .gifoOverlay {
   position: absolute;
   top: 0;
   height: 98%;
@@ -366,19 +366,19 @@ body .gifoCard .gifoOverlay {
   color: transparent;
 }
 
-body .gifoCard .gifoOverlay h4, body .gifoCard .gifoOverlay h5 {
+body .gifoCard .gifoOverlay h4, body .gifoCard .gifoOverlay h5, body .gifoCardTrending .gifoOverlay h4, body .gifoCardTrending .gifoOverlay h5 {
   padding: 0 10px;
 }
 
-body .gifoCard .gifoOverlay h5 {
+body .gifoCard .gifoOverlay h5, body .gifoCardTrending .gifoOverlay h5 {
   padding-top: 20px;
 }
 
-body .gifoCard .gifoOverlay .gifoOverlayAct {
+body .gifoCard .gifoOverlay .gifoOverlayAct, body .gifoCardTrending .gifoOverlay .gifoOverlayAct {
   display: none;
 }
 
-body .gifoCard .gifoOverlay .gifoOverlayAct span {
+body .gifoCard .gifoOverlay .gifoOverlayAct span, body .gifoCardTrending .gifoOverlay .gifoOverlayAct span {
   padding: 6px 3px;
   cursor: pointer;
 }
@@ -391,6 +391,26 @@ body .gifoCard:hover .gifoOverlay {
 }
 
 body .gifoCard:hover .gifoOverlay .gifoOverlayAct {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body .gifoCardTrending:hover .gifoOverlay {
+  color: white;
+  background-color: rgba(86, 46, 229, 0.7);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+body .gifoCardTrending:hover .gifoOverlay .gifoOverlayAct {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
