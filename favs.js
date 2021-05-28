@@ -57,7 +57,6 @@ function cargarFavoritos() {
 
         gifoDwnld.appendChild(iconDwnld);
         gifoExp.appendChild(iconexp);
-        
         gifoOverlayAct.appendChild(gifoDwnld);
         gifoOverlayAct.appendChild(gifoExp);
 
@@ -72,8 +71,24 @@ function cargarFavoritos() {
 
         document.getElementById("favResult").appendChild(gifoCard);
 
-
     }
+
+
+    // SIN RESULTADO
+    
+    if (gifosFavoritos.length == 0){
+
+        document.getElementById("favResult").innerHTML = '';
+        const nores = document.createElement("div");
+        const noresImg = document.createElement("img");
+        const noresTxt = document.createElement("h4");
+        noresImg.src = 'images/icons/icon-fav-sin-contenido.svg';
+        noresTxt.innerHTML = '"¡Guarda tu primer GIFO en Favoritos para que se muestre aquí!"';
+        nores.appendChild(noresImg);
+        nores.appendChild(noresTxt);
+        nores.classList.add("noResult");
+        document.getElementById("favResult").appendChild(nores);
+      }
 
 }
 

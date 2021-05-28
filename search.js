@@ -39,6 +39,7 @@ const createImages = (images) => {
 
     // SEARCH CARDS
 
+
     const gifo = document.createElement("img");
     gifo.classList.add('gifo');
     gifo.src = images.data[index].images.fixed_height.url;
@@ -175,6 +176,7 @@ const createImages = (images) => {
 
   if (images.data.length == 0){
     document.getElementById("searchResult").innerHTML = '';
+    document.getElementById("searchTerm").innerHTML = '';
     const nores = document.createElement("div");
     const noresImg = document.createElement("img");
     const noresTxt = document.createElement("h4");
@@ -206,8 +208,15 @@ button.addEventListener("click", async () => {
   let texto = document.getElementsByClassName('searchBox')[0].value;
   busqueda = texto;
   document.getElementById("searchResult").innerHTML = '';
+  document.getElementById("searchTerm").innerHTML = '';
+
+  const searchTerm = document.createElement("h2");
+  searchTerm.innerHTML = busqueda;
+  document.getElementById("searchTerm").appendChild(searchTerm);
+
   document.getElementById("verMasCont").innerHTML = '';
   document.getElementsByClassName("modal-content2")[0].innerHTML = '';
+
   const images = await searchEndpoint(texto, offset);
   createImages(images);
 });
