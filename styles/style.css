@@ -280,7 +280,7 @@ body .mainbanner .trendingTopics h4, body .mainbanner .trendingTopics span {
   margin: 10px 0;
 }
 
-body #searchResult {
+body #searchResult, body #favResult {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -368,10 +368,6 @@ body .gifoCard .gifoOverlay, body .gifoCardTrending .gifoOverlay {
 
 body .gifoCard .gifoOverlay h4, body .gifoCard .gifoOverlay h5, body .gifoCardTrending .gifoOverlay h4, body .gifoCardTrending .gifoOverlay h5 {
   padding: 0 10px;
-}
-
-body .gifoCard .gifoOverlay h5, body .gifoCardTrending .gifoOverlay h5 {
-  padding-top: 20px;
 }
 
 body .gifoCard .gifoOverlay .gifoOverlayAct, body .gifoCardTrending .gifoOverlay .gifoOverlayAct {

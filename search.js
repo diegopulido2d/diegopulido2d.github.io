@@ -24,7 +24,7 @@ const createImages = (images) => {
   for (let index = 0; index < images.data.length; index++) {
 
 
-    var favorito = {
+    let favorito = {
       gifo: '',
       username: '',
       title: ''

@@ -262,7 +262,7 @@ body{
 
         }
 
-        #searchResult{
+        #searchResult, #favResult{
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -333,13 +333,11 @@ body{
                 color: transparent;
                 color: transparent;
 
+
                 h4, h5{
                     padding: 0 10px;
                 }
-
-                h5{
-                    padding-top: 20px;
-                }
+                
 
             .gifoOverlayAct{
                display: none;

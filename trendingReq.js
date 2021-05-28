@@ -4,7 +4,8 @@
     const trendingGifosReq = 'https://api.giphy.com/v1/gifs/trending?api_key='+apiKey1; 
 
 
-    var favs = [];
+    let favs = [];
+    let cont2 = 0;
     
     
     fetch(trendingGifosReq, {
@@ -15,7 +16,7 @@
         for (i = 0; i < 5; i++){
 
       
-            var favorito = {
+            let favorito = {
                 gifo: '',
                 username: '',
                 title: ''
@@ -23,9 +24,9 @@
 
             favs.push(favorito);
 
-            favs[i].gifo = result.data[i].images.fixed_height.url;
-            favs[i].username = result.data[i].username;
-            favs[i].title = result.data[i].title;
+            favs[cont2].gifo = result.data[i].images.fixed_height.url;
+            favs[cont2].username = result.data[i].username;
+            favs[cont2].title = result.data[i].title;
 
 
             // TRENDING CARDS
@@ -43,12 +44,12 @@
 
             const gifoFav = document.createElement('span');
             gifoFav.classList.add('gifoFav');
-            gifoFav.setAttribute("onclick","gifoFavoritoTrending("+(i)+")");
+            gifoFav.setAttribute("onclick","gifoFavoritoTrending("+(cont2)+")");
             const gifoDwnld = document.createElement('span');
             gifoDwnld.classList.add('gifoDwnld');
             const gifoExp = document.createElement('span');
             gifoExp.classList.add('gifoExp');
-            gifoExp.setAttribute("onclick","openModal("+(i)+")");
+            gifoExp.setAttribute("onclick","openModal("+(cont2)+")");
 
 
             const gifoCardTrending = document.createElement('div');
@@ -109,7 +110,7 @@
 
             const imgExpGifoFav = document.createElement('span');
             imgExpGifoFav.classList.add('imgExpGifoFav');
-            imgExpGifoFav.setAttribute("onclick","gifoFavoritoTrending("+(i)+")");
+            imgExpGifoFav.setAttribute("onclick","gifoFavoritoTrending("+(cont2)+")");
             const imgExpGifoDwld = document.createElement('span');
             imgExpGifoDwld.classList.add('imgExpGifoDwld');
 
@@ -139,7 +140,7 @@
 
             document.getElementsByClassName("modal-content")[0].appendChild(slides);
 
-
+            cont2++;
 
         }
     })
@@ -150,7 +151,6 @@
     // GIFO FAVORITO TRENDING
  
     function gifoFavoritoTrending(n){
-        console.log(favs[n]);
         localStorage.setItem('favoritoTrending'+n, JSON.stringify(favs[n]));
     }
 
