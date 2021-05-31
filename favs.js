@@ -71,6 +71,59 @@ function cargarFavoritos() {
 
         document.getElementById("favResult").appendChild(gifoCard);
 
+
+
+
+
+
+
+
+
+    // SEARCH CARD MODALS
+
+    const favCard = document.createElement('div');
+    favCard.classList.add('favCard');
+    const imgExpandidaDet = document.createElement('div');
+    imgExpandidaDet.classList.add('imgExpandidaDet');
+    const imgExpandidaInfo = document.createElement('div');
+    imgExpandidaInfo.classList.add('imgExpandidaInfo');
+    const imgExpandidaAct = document.createElement('div');
+    imgExpandidaAct.classList.add('imgExpandidaAct');
+
+    const imgExpandida = document.createElement('img');
+    imgExpandida.src = fvrt.original;
+    imgExpandida.classList.add('imgExpandida');
+    const imgExpDwnld = document.createElement('img');
+    imgExpDwnld.src = "images/icons/icon-download.svg";
+    const imgExpGifoDwld = document.createElement('span');
+    imgExpGifoDwld.classList.add('imgExpGifoDwld');
+
+    const imgExpandidaUser = document.createElement('h5');
+    imgExpandidaUser.classList.add('imgExpandidaUser');
+    imgExpandidaUser.innerHTML = fvrt.username;
+    const imgExpandidaTitle = document.createElement('h4');
+    imgExpandidaTitle.classList.add('imgExpandidaTitle');
+    imgExpandidaTitle.innerHTML= fvrt.title;
+
+
+    imgExpGifoDwld.appendChild(imgExpDwnld);
+    imgExpandidaAct.appendChild(imgExpGifoDwld);
+
+    imgExpandidaInfo.appendChild(imgExpandidaUser);
+    imgExpandidaInfo.appendChild(imgExpandidaTitle);
+
+    imgExpandidaDet.appendChild(imgExpandidaInfo);
+    imgExpandidaDet.appendChild(imgExpandidaAct);
+
+    favCard.appendChild(imgExpandida);
+    favCard.appendChild(imgExpandidaDet);
+
+
+    document.getElementsByClassName("modal-content3")[0].appendChild(favCard);
+
+
+
+
     }
 
 
@@ -94,3 +147,26 @@ function cargarFavoritos() {
 
 cargarFavoritos();
 
+
+ // MODAL
+
+ function openModal2(a){
+    document.getElementById("modal3").style.display = "block";
+    showSearch(a);
+  }
+
+  function closeModal2() {
+    document.getElementById("modal3").style.display = "none";
+  }
+
+
+  function showSearch(n) {
+    
+    var searchCard = document.getElementsByClassName("favCard");
+
+    for (var i = 0; i < searchCard.length; i++) {
+    searchCard[i].style.display = "none";
+    }
+
+    searchCard[n].style.display = "flex";
+  }

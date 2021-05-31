@@ -33,6 +33,7 @@ const createImages = (images) => {
     favs2.push(favorito);
     
     favs2[cont].gifo = images.data[index].images.fixed_height.url;
+    favs2[cont].original = images.data[index].images.original.url;
     favs2[cont].username = images.data[index].username;
     favs2[cont].title = images.data[index].title; 
 

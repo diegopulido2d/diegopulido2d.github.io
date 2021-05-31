@@ -28,7 +28,7 @@ body nav .logo {
 }
 
 body nav img {
-  width: 30px;
+  width: 40px;
 }
 
 body nav .menu {
@@ -110,6 +110,9 @@ body nav ul {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body nav ul li {
@@ -637,16 +640,7 @@ body footer .socialmedia ul li span:hover {
   background-color: white;
 }
 
-.modal-content {
-  position: relative;
-  margin: auto;
-  padding: 0;
-  width: 90%;
-  height: 100%;
-  max-width: 1200px;
-}
-
-.modal-content2 {
+.modal-content, .modal-content2, .modal-content3 {
   position: relative;
   margin: auto;
   padding: 0;
@@ -672,22 +666,7 @@ body footer .socialmedia ul li span:hover {
 }
 
 /* Hide the slides by default */
-.slides {
-  display: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 100%;
-}
-
-.searchCard {
+.slides, .searchCard, .favCard {
   display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;

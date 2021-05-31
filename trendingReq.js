@@ -25,6 +25,7 @@
             favs.push(favorito);
 
             favs[cont2].gifo = result.data[i].images.fixed_height.url;
+            favs[cont2].original = result.data[i].images.original.url;
             favs[cont2].username = result.data[i].username;
             favs[cont2].title = result.data[i].title;
 
