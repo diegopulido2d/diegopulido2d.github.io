@@ -104,6 +104,7 @@ const createImages = (images) => {
       const verMasBtn = document.createElement("button");
       verMasBtn.innerHTML = 'Ver más';
       verMasBtn.classList.add("verMasBtn");
+      verMasBtn.classList.add("boton");
       document.getElementById("verMasCont").appendChild(verMasBtn);
 
 

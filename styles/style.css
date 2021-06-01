@@ -606,7 +606,7 @@ body footer .socialmedia ul li span:hover {
   color: #50E3C2;
 }
 
-.verMasBtn {
+.boton {
   background-color: transparent;
   border: 1px solid #572EE5;
   border-radius: 40px;
@@ -621,7 +621,7 @@ body footer .socialmedia ul li span:hover {
   cursor: pointer;
 }
 
-.verMasBtn:hover {
+.boton:hover {
   background-color: #572EE5;
   color: white;
   -webkit-transition: 0.2s;
@@ -706,5 +706,108 @@ body footer .socialmedia ul li span:hover {
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
+}
+
+.crearGifoSec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.crearGifoSec .crearGifoImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 200px;
+}
+
+/* Style the form */
+#regForm {
+  padding: 40px;
+}
+
+/* Hide all steps by default: */
+.tab {
+  text-align: center;
+  display: none;
+  width: 600px;
+}
+
+.tab .tabCard {
+  width: 100%;
+  height: 350px;
+  border: #572EE5 solid 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tab .tabCard h3 {
+  color: #572EE5;
+}
+
+.tab .tabCard b {
+  color: #50E3C2;
+}
+
+.tab .tabCard p {
+  font-size: 12px;
+  line-height: 24px;
+}
+
+.tab .boton {
+  margin-top: 30px;
+}
+
+.steps {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.step:nth-child(1) {
+  display: none;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #04AA6D;
+}
+
+.divisor {
+  width: 100%;
+  height: 5px;
+  border-radius: 20px;
+  background-color: #572EE5;
 }
 /*# sourceMappingURL=style.css.map */
