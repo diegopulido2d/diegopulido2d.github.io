@@ -11,9 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/193e68cff9.css">
 
     <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.6/RecordRTC.js"></script>
-    <script src="node_modules/recordrtc/RecordRTC.js"></script>
-    <script src="bower_components/recordrtc/RecordRTC.js"></script>
+    <script src="https://www.webrtc-experiment.com/gif-recorder.js"></script>
 
 </head>
 <body>
@@ -79,12 +77,11 @@
                 </div>
                 <div class="divisor"></div>
                 <div>
-                    <button type="button" id="nextBtn" class="boton" onclick="nextPrev(1);getMedia(constraints);">Comenzar</button>
+                    <button type="button" id="nextBtn" class="boton" onclick="nextPrev(1);getMedia();">Comenzar</button>
                 </div>
             </div>
             
             <div class="tab">
-                
                 <div class="tabCard">  
                   <video class="videoGifo" autoplay></video>
                   <h3 class="tabCardTit">¿Nos das acceso a tu cámara?</h3>
@@ -100,34 +97,16 @@
                   </div>
                   <div class="divisor"></div>
                   <div>
-                    <button type="button" class="boton">Grabar</button>
+                    <button type="button" id="btn-start-recording" class="boton">Grabar</button>
+                    <button type="button" id="btn-stop-recording" class="boton">Stop</button>
+                    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
                 </div>
             </div>
             
-            <div class="tab">Birthday:
-              <p><input placeholder="dd" oninput="this.className = ''"></p>
-              <p><input placeholder="mm" oninput="this.className = ''"></p>
-              <p><input placeholder="yyyy" oninput="this.className = ''"></p>
-
-              <!-- Circles which indicates the steps of the form: -->
-            <div style="text-align:center;margin-top:40px;">
-                <span class="step"></span>
-                <span class="step"></span>
-                <span class="step"></span>
-                <span class="step"></span>
-              </div>
-            
-            <div style="overflow:auto;">
-              <div style="float:right;">
-                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-              </div>
-            </div>
-            </div>
-            
-            <div class="tab">Login Info:
-              <p><input placeholder="Username..." oninput="this.className = ''"></p>
-              <p><input placeholder="Password..." oninput="this.className = ''"></p>
+            <div class="tab">
+                <div class="tabCard">
+                    <img id="recordedGifo">
+                </div>
 
               <!-- Circles which indicates the steps of the form: -->
             <div style="text-align:center;margin-top:40px;">
@@ -168,6 +147,7 @@
 
     <script src="script.js"></script>
     <script src="cameraVid.js"></script>
+    <script src="https://www.webrtc-experiment.com/common.js"></script>
     
     
 </body>

@@ -775,6 +775,10 @@ body footer .socialmedia ul li span:hover {
   display: none;
 }
 
+.tab .tabCard #recordedGifo {
+  height: 100%;
+}
+
 .tab .boton {
   margin-top: 30px;
 }
