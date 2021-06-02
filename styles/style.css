@@ -708,6 +708,14 @@ body footer .socialmedia ul li span:hover {
   border-radius: 3px 0 0 3px;
 }
 
+#btn-stop-recording {
+  display: none;
+}
+
+#btn-send {
+  display: none;
+}
+
 .crearGifoSec {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -775,7 +783,7 @@ body footer .socialmedia ul li span:hover {
   display: none;
 }
 
-.tab .tabCard #recordedGifo {
+.tab .tabCard .recordedGifo {
   height: 100%;
 }
 
@@ -813,6 +821,55 @@ body footer .socialmedia ul li span:hover {
   font-size: 12px;
   width: 30px;
   margin: 0 7px;
+}
+
+#btnBack {
+  display: none;
+  font-family: 'Montserrat', sans-serif;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 12px;
+  color: #572EE5;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  height: 30px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: underline;
+  -webkit-text-decoration-color: transparent;
+          text-decoration-color: transparent;
+}
+
+#btnBack:hover {
+  -webkit-text-decoration-color: #00f3bb;
+          text-decoration-color: #00f3bb;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.recordControls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.recordControls #columna {
+  display: none;
+  width: 130px;
+}
+
+.recordedGifo {
+  display: none;
 }
 
 .divisor {

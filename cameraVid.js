@@ -1,10 +1,11 @@
 var recorder;
-var image = document.getElementById('recordedGifo');
+var image = document.getElementsByClassName('recordedGifo')[0];
+var image2 = document.getElementsByClassName('recordedGifo2')[0];
+let video = document.querySelector("video");
+let stream = null;
 
 
 async function getMedia() {
-    let stream = null;
-    let video = document.querySelector("video");
   
     try {
       stream = await navigator.mediaDevices.getUserMedia({video: true});
@@ -14,8 +15,7 @@ async function getMedia() {
         tabCardTit.style.display = 'none';
         let tabCardDesc = document.getElementsByClassName('tabCardDesc')[1];
         tabCardDesc.style.display = 'none';
-        let videoRec = document.getElementsByTagName('video')[0];
-        videoRec.style.display = 'block';
+        video.style.display = 'block';
         video.srcObject = stream;
       }
 
@@ -35,6 +35,12 @@ function captureCamera(callback) {
 
 function stopRecordingCallback() {
     image.src = URL.createObjectURL(recorder.getBlob());
+    image2.src = URL.createObjectURL(recorder.getBlob());
+
+    let form = new FormData();
+    form.append('file', recorder.getBlob(), 'myGif.gif');
+    console.log(form.get('file'));
+
     recorder.camera.stop();
     recorder.destroy();
     recorder = null;
@@ -42,7 +48,12 @@ function stopRecordingCallback() {
 
 
 document.getElementById('btn-start-recording').onclick = function() {
-    this.disabled = true;
+
+    let btnGrabar = document.getElementById('btn-start-recording');
+    btnGrabar.style.display = 'none';
+    let btnStop = document.getElementById('btn-stop-recording');
+    btnStop.style.display = 'inline';
+
     captureCamera(function(camera) {
         recorder = RecordRTC(camera, {
             type: 'gif',
@@ -52,6 +63,7 @@ document.getElementById('btn-start-recording').onclick = function() {
             hidden: 240,
             onGifPreview: function(gifURL) {
                 image.src = gifURL;
+                image2.src = gifURL;
             }
         });
 
@@ -64,7 +76,59 @@ document.getElementById('btn-start-recording').onclick = function() {
     });
 };
 
+
 document.getElementById('btn-stop-recording').onclick = function() {
-    this.disabled = true;
-    recorder.stopRecording(stopRecordingCallback);
+
+  
+  let btnStop = document.getElementById('btn-stop-recording');
+  btnStop.style.display = 'none';
+  let btnSend = document.getElementById('btn-send');
+  btnSend.style.display = 'inline';
+  let btnBack= document.getElementById('btnBack');
+  btnBack.style.display = 'inline';
+  let columna= document.getElementById('columna');
+  columna.style.display = 'inline';
+
+  video.style.display = 'none';
+  image.style.display = 'inline';
+
+  recorder.stopRecording(stopRecordingCallback);
 };
+
+
+
+document.getElementById('btnBack').onclick = function() {
+    
+  let btnGrabar = document.getElementById('btn-start-recording');
+    btnGrabar.style.display = 'inline';
+  let btnSend = document.getElementById('btn-send');
+  btnSend.style.display = 'none';
+  let btnBack= document.getElementById('btnBack');
+  btnBack.style.display = 'none';
+  let columna= document.getElementById('columna');
+  columna.style.display = 'none';
+
+  video.style.display = 'inline';
+  image.style.display = 'none';
+
+};
+
+
+
+function clearButtons(){
+    
+  let btnGrabar = document.getElementById('btn-start-recording');
+    btnGrabar.style.display = 'inline';
+  let btnSend = document.getElementById('btn-send');
+  btnSend.style.display = 'none';
+  let btnBack= document.getElementById('btnBack');
+  btnBack.style.display = 'none';
+  let columna= document.getElementById('columna');
+  columna.style.display = 'none';
+
+  video.style.display = 'inline';
+  image.style.display = 'none';
+
+};
+
+

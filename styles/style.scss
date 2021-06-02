@@ -666,6 +666,13 @@ body{
   }
 
 
+  #btn-stop-recording{
+      display: none;
+  }
+
+  #btn-send{
+      display: none;
+  }
 
 
   .crearGifoSec{
@@ -727,7 +734,7 @@ body{
             display: none;
         }
 
-        #recordedGifo{
+        .recordedGifo{
             height: 100%;
         }
 
@@ -777,6 +784,48 @@ body{
     
 
   }
+
+    #btnBack{
+        display: none;
+        font-family: 'Montserrat', sans-serif;
+        background-color: transparent;
+        text-decoration: none;
+        font-size: 12px;
+        color: #572EE5;
+        transition: 0.2s;
+        height: 30px;
+        border: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+    }
+
+    #btnBack:hover{
+        text-decoration-color: rgba(0,243,187,1);
+        transition: 0.1s;
+    }
+
+
+
+    .recordControls{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+
+        #columna{
+            display: none;
+            width: 130px;
+        }
+
+
+    }
+
+    .recordedGifo{
+        display: none;
+    }
+
 
   .divisor{
       width: 100%;

@@ -69,43 +69,52 @@
                     (sólo necesitas una cámara para grabar un video)
                 </p>
               </div>
+              <div class="recordControls">
                 <div class="pasos">
                     <span class="paso0"></span>
                     <span class="paso1">1</span>
                     <span class="paso2">2</span>
                     <span class="paso3">3</span>
                 </div>
+              </div>
+                
                 <div class="divisor"></div>
                 <div>
-                    <button type="button" id="nextBtn" class="boton" onclick="nextPrev(1);getMedia();">Comenzar</button>
+                    <button type="button" class="boton" onclick="nextPrev(1);getMedia();">Comenzar</button>
                 </div>
             </div>
             
             <div class="tab">
-                <div class="tabCard">  
+                <div class="tabCard">
+                  <img class="recordedGifo">  
                   <video class="videoGifo" autoplay></video>
                   <h3 class="tabCardTit">¿Nos das acceso a tu cámara?</h3>
                   <p class="tabCardDesc">El acceso a la cámara será válido sólo<br>
                      por el tiempo en el que estés creando el GIFO
                   </p>
                 </div>
-                  <div class="pasos">
-                      <span class="paso0"></span>
-                      <span class="paso1">1</span>
-                      <span class="paso2">2</span>
-                      <span class="paso3">3</span>
+                <div class="recordControls">
+                    <div id="columna"></div>
+                    <div class="pasos">
+                        <span class="paso0"></span>
+                        <span class="paso1">1</span>
+                        <span class="paso2">2</span>
+                        <span class="paso3">3</span>
+                    </div>
+                    <button type="button" id="btnBack">Repetir Captura</button>
+
                   </div>
                   <div class="divisor"></div>
                   <div>
                     <button type="button" id="btn-start-recording" class="boton">Grabar</button>
-                    <button type="button" id="btn-stop-recording" class="boton">Stop</button>
-                    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                    <button type="button" id="btn-stop-recording" class="boton">Finalizar</button>
+                    <button type="button" id="btn-send" class="boton" onclick="nextPrev(1);clearButtons();">Subir Gifo</button>
                 </div>
             </div>
             
             <div class="tab">
                 <div class="tabCard">
-                    <img id="recordedGifo">
+                    <img class="recordedGifo2">
                 </div>
 
               <!-- Circles which indicates the steps of the form: -->
@@ -119,7 +128,6 @@
             <div style="overflow:auto;">
               <div style="float:right;">
                 <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
               </div>
             </div>
             </div>
