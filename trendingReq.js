@@ -3,11 +3,9 @@
     const apiKey1= 'f7Vi6MThkVsup5hqnFvUaOhAlxZ7RAtg'
     const trendingGifosReq = 'https://api.giphy.com/v1/gifs/trending?api_key='+apiKey1; 
 
-
     let favs = [];
     let cont2 = 0;
-    
-    
+        
     fetch(trendingGifosReq, {
         method: 'GET'
     })

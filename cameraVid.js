@@ -1,8 +1,14 @@
+//RECORD GIFOS
+
+
 var recorder;
 var image = document.getElementsByClassName('recordedGifo')[0];
 var image2 = document.getElementsByClassName('recordedGifo2')[0];
 let video = document.querySelector("video");
 let stream = null;
+
+let form = new FormData();
+let xyz = {};
 
 
 async function getMedia() {
@@ -37,10 +43,10 @@ function stopRecordingCallback() {
     image.src = URL.createObjectURL(recorder.getBlob());
     image2.src = URL.createObjectURL(recorder.getBlob());
 
-    let form = new FormData();
     form.append('file', recorder.getBlob(), 'myGif.gif');
-    console.log(form.get('file'));
 
+    console.log(form.get('file'));
+    
     recorder.camera.stop();
     recorder.destroy();
     recorder = null;
@@ -115,19 +121,23 @@ document.getElementById('btnBack').onclick = function() {
 
 
 
-function clearButtons(){
-    
-  let btnGrabar = document.getElementById('btn-start-recording');
-    btnGrabar.style.display = 'inline';
-  let btnSend = document.getElementById('btn-send');
-  btnSend.style.display = 'none';
-  let btnBack= document.getElementById('btnBack');
-  btnBack.style.display = 'none';
-  let columna= document.getElementById('columna');
-  columna.style.display = 'none';
+function uploadGifo(){
 
-  video.style.display = 'inline';
-  image.style.display = 'none';
+  const apiKey3= 'f7Vi6MThkVsup5hqnFvUaOhAlxZ7RAtg';
+
+  console.log(form.get('file'));
+
+
+  const uploadGifosReq = 'https://upload.giphy.com/v1/gifs?api_key='+apiKey3+'?file='+form.get('file'); 
+ 
+  
+  fetch(uploadGifosReq)
+  .then(response => response.json())
+  .then(result => {
+
+    console.log(result);
+
+  }).catch(error => console.log('error', error)); 
 
 };
 
