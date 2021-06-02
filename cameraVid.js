@@ -8,7 +8,7 @@ let video = document.querySelector("video");
 let stream = null;
 
 let form = new FormData();
-let xyz = {};
+let queryStr = '';
 
 
 async function getMedia() {
@@ -44,9 +44,8 @@ function stopRecordingCallback() {
     image2.src = URL.createObjectURL(recorder.getBlob());
 
     form.append('file', recorder.getBlob(), 'myGif.gif');
+    queryStr = new URLSearchParams(form).toString();
 
-    console.log(form.get('file'));
-    
     recorder.camera.stop();
     recorder.destroy();
     recorder = null;
@@ -125,13 +124,13 @@ function uploadGifo(){
 
   const apiKey3= 'f7Vi6MThkVsup5hqnFvUaOhAlxZ7RAtg';
 
-  console.log(form.get('file'));
 
-
-  const uploadGifosReq = 'https://upload.giphy.com/v1/gifs?api_key='+apiKey3+'?file='+form.get('file'); 
+  const uploadGifosReq = 'https://upload.giphy.com/v1/gifs?api_key='+apiKey3; 
  
-  
-  fetch(uploadGifosReq)
+  fetch(uploadGifosReq, {
+    method: 'POST',
+    body: form
+  })
   .then(response => response.json())
   .then(result => {
 
