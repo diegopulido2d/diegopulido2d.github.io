@@ -8,7 +8,6 @@ let video = document.querySelector("video");
 let stream = null;
 
 let form = new FormData();
-let queryStr = '';
 
 
 async function getMedia() {
@@ -44,7 +43,6 @@ function stopRecordingCallback() {
     image2.src = URL.createObjectURL(recorder.getBlob());
 
     form.append('file', recorder.getBlob(), 'myGif.gif');
-    queryStr = new URLSearchParams(form).toString();
 
     recorder.camera.stop();
     recorder.destroy();
@@ -124,7 +122,6 @@ function uploadGifo(){
 
   const apiKey3= 'f7Vi6MThkVsup5hqnFvUaOhAlxZ7RAtg';
 
-
   const uploadGifosReq = 'https://upload.giphy.com/v1/gifs?api_key='+apiKey3; 
  
   fetch(uploadGifosReq, {
@@ -134,7 +131,16 @@ function uploadGifo(){
   .then(response => response.json())
   .then(result => {
 
-    console.log(result);
+    let gifoObj = {
+      'gifo': 'https://media3.giphy.com/media/'+result.data['id']+'/giphy.gif?cid=c0654d684obin35i33tj26i50xe0ho4gpxjao6ue4uwp07o7&rid=giphy.gif&ct=g'
+    }
+
+    
+    var gifoJson = JSON.parse(localStorage.getItem("uplGifos")) || [];
+    gifoJson.push(gifoObj);
+    localStorage.setItem("uplGifos", JSON.stringify(gifoJson));
+    
+
 
   }).catch(error => console.log('error', error)); 
 
