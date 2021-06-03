@@ -16,8 +16,6 @@ function allStorage() {
         
     }
 
-    console.log(gifosFavoritos);
-
     return gifosFavoritos;
 
 }

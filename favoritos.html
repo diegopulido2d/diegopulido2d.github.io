@@ -14,38 +14,40 @@
 <body>
 
      <header>
-    <nav>
-        <div class="logo">
-            <a href="index.html"><img src="images/logo-desktop.svg" alt=""></a>
-        </div>
-        <div class="menu_mobile">
-            
-                <input type="checkbox" id="menumobile">
-
-                <span></span>
-                <span></span>
-                <span></span>
-
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img class="menuIcon" src="images/logo-desktop.svg" alt=""></a>
+            </div>
+            <div class="menu_mobile">
                 
-                <div class="dropdown_menu">
-                    <ul>
-                        <li><a href="#">Modo Nocturno</a></li>
-                        <li><a href="#">Favoritos</a></li>
-                        <li><a href="misGifos.html">Mis GIFOS</a></li>
-                        <li><a href="crear-gifo.html"><img src="images/buttons/button-crear-gifo.svg"></a></li>
-                    </ul>
-                </div>
-
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="crear-gifo.html"><img src="images/buttons/button-crear-gifo.svg"></a></li>
-                <li><a href="#"><h4>MODO NOCTURNO</h4></a></li>
-                <li><a href="#"><h4>FAVORITOS</h4></a></li>
-                <li><a href="misGifos.html"><h4>MIS GIFOS</h4></a></li>
-            </ul>
-        </div>
-    </nav>
+                    <input type="checkbox" id="menumobile">
+    
+                    <span></span>
+                    <span></span>
+                    <span></span>
+    
+                    
+                    <div class="dropdown_menu">
+                        <ul>
+                            <li class="mdNoc" onclick="mdNoc('favoritos')">Modo Nocturno</li>
+                            <li class="mdDiu" onclick="mdDiu('favoritos')">Modo Diurno</li>
+                            <li><a href="favoritos.html">Favoritos</a></li>
+                            <li><a href="misGifos.html">Mis GIFOS</a></li>
+                            <li><a href="crear-gifo.html"><img src="images/buttons/button-crear-gifo.svg"></a></li>
+                        </ul>
+                    </div>
+    
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="crear-gifo.html"><img src="images/buttons/button-crear-gifo.svg"></a></li>
+                    <li class="mdNoc" onclick="mdNoc('favoritos')"><h4 class="menulink">MODO NOCTURNO</h4></li>
+                    <li class="mdDiu" onclick="mdDiu('favoritos')"><h4 class="menulink">MODO DIURNO</h4></li>
+                    <li><a href="favoritos.html"><h4 class="menulink">FAVORITOS</h4></a></li>
+                    <li><a href="misGifos.html"><h4 class="menulink">MIS GIFOS</h4></a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
     
     <section class="mainbanner2">

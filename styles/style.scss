@@ -1,12 +1,12 @@
 body{
-    background-color: white;
+    background-color:#572EE5;
     width: 100%;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
 
 
     nav{
-        height: 28px;
+        height: 48px;
         background-color: white;
         display: flex;
         flex-direction: row;
@@ -17,6 +17,10 @@ body{
 
         .logo{
             font-family: 'Roboto', sans-serif;
+
+            img{
+                padding-top: 10px;
+            }
         }
 
         img{
@@ -27,10 +31,7 @@ body{
             width: 600px;
         }
 
-        h4{
-            color: #572EE5;
-            margin: 0;
-        }
+       
 
 
         .menu_mobile{
@@ -100,24 +101,30 @@ body{
             flex-direction: row-reverse;
             align-items: center;
 
-            li{
-              padding: 0 20px;  
 
-                a{
-                    text-decoration: none;
+                li{
                     font-size: 12px;
-                    color: rgba(6,10,36,1);
+                    margin: 0;
+                    padding: 0 20px;
+                    cursor: pointer;
+
+                    a{
+                        text-decoration: none;
+                    }
+                }
+
+
+                h4{
+                    color: #572EE5;
+                    text-decoration: underline;
+                    text-decoration-color: transparent;
+                }
+
+                h4:hover{
+                    text-decoration-color:rgba(0,243,187,1);
                     transition: 0.2s;
                 }
-
-                a:hover{
-                    text-decoration: underline;
-                    color:rgba(0,243,187,1);
-                    transition: 0.1s;
-                }
-
-
-
+                
             }
 
         }
@@ -166,10 +173,11 @@ body{
 
 
         .mainbanner, .mainbanner2{
-            padding-top: 50px;
+            padding-top: 30px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            background-color: white;
 
             h1, h3{
                 font-weight: 600;
@@ -264,7 +272,6 @@ body{
         }
 
         .mainbanner2{
-            padding-top: 20px;
 
             h3{
                 padding-top: 10px;
@@ -469,6 +476,7 @@ body{
             flex-direction: row;
             justify-content: space-between;
             border-bottom: solid 5px #572EE5;
+            background-color: white;
 
                 p{
                     font-size: 12px;
@@ -559,7 +567,7 @@ body{
                 display: none;
             }
         }
-}
+
 
 
 .noResult{
@@ -684,6 +692,7 @@ body{
   .crearGifoSec{
       display: flex;
       justify-content: center;
+      background-color: white;
 
     .crearGifoImg{
         display: flex;
@@ -840,4 +849,28 @@ body{
       height: 5px;
       border-radius: 20px;
       background-color: #572EE5;
+  }
+
+
+
+
+  .mdDiu{
+      display: none;
+  }
+
+  //MODO NOCTURNO
+
+  .darkBg{
+      background-color: #37383C !important;
+      transition: 0.2s;
+  }
+
+  .rllyDarkBg{
+    background-color: #222326 !important;
+    transition: 0.2s;
+  }
+
+  .darkTxt{
+      color: white !important;
+      transition: 0.2s;
   }
