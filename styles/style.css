@@ -275,7 +275,7 @@ body .mainbanner .searchBar .autocomplete-active, body .mainbanner2 .searchBar .
 
 body .mainbanner .trendingTopics, body .mainbanner2 .trendingTopics {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 body .mainbanner .trendingTopics h4, body .mainbanner .trendingTopics span, body .mainbanner2 .trendingTopics h4, body .mainbanner2 .trendingTopics span {
@@ -294,9 +294,7 @@ body .mainbanner2 h3 {
 }
 
 body #searchResult {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: center;
@@ -306,6 +304,7 @@ body #searchResult {
 }
 
 body #searchTerm {
+  display: none;
   padding-bottom: 30px;
 }
 
@@ -313,6 +312,11 @@ body #searchTerm h2 {
   color: #572EE5;
   margin: 10px 0;
   font-size: 30px;
+}
+
+body #verMasCont {
+  display: none;
+  padding: 30px 0 60px 0;
 }
 
 body #favResult {
@@ -327,8 +331,16 @@ body #favResult {
   padding: 60px;
 }
 
-body #verMasCont {
-  padding: 30px 0 60px 0;
+body #uplResult {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 60px;
 }
 
 body .searchBtn {
@@ -640,7 +652,7 @@ body footer .socialmedia ul li span:hover {
   background-color: white;
 }
 
-.modal-content, .modal-content2, .modal-content3 {
+.modal-content, .modal-content2, .modal-content3, .modal-content4 {
   position: relative;
   margin: auto;
   padding: 0;

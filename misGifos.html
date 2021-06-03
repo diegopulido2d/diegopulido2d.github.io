@@ -29,9 +29,9 @@
                 
                 <div class="dropdown_menu">
                     <ul>
-                        <li><a href="#episodios">Modo Nocturno</a></li>
+                        <li><a href="#">Modo Nocturno</a></li>
                         <li><a href="favoritos.html">Favoritos</a></li>
-                        <li><a href="misGifos.html">Mis GIFOS</a></li>
+                        <li><a href="#">Mis GIFOS</a></li>
                         <li><a href="crear-gifo.html"><img src="images/buttons/button-crear-gifo.svg"></a></li>
                     </ul>
                 </div>
@@ -40,34 +40,19 @@
         <div class="menu">
             <ul>
                 <li><a href="crear-gifo.html"><img src="images/buttons/button-crear-gifo.svg"></a></li>
-                <li><a href="#episodios"><h4>MODO NOCTURNO</h4></a></li>
+                <li><a href="#"><h4>MODO NOCTURNO</h4></a></li>
                 <li><a href="favoritos.html"><h4>FAVORITOS</h4></a></li>
-                <li><a href="misGifos.html"><h4>MIS GIFOS</h4></a></li>
+                <li><a href="#"><h4>MIS GIFOS</h4></a></li>
             </ul>
         </div>
     </nav>
     </header>
     
-    <section class="mainbanner">
-        <h1>Inspírate, busca, guarda, y crea <br>los mejores <b>GIFOS</b></h1>
-        <img src="./images/ilustra_header.svg" alt="">
+    <section class="mainbanner2">
+        <img src="./images/icons/icon-mis-gifos.svg" alt="">
+        <h3>Mis GIFOS</h3>
 
-        <div class="searchBar">
-            <form autocomplete="off" action="">
-                <div class="autocomplete">
-                  <input id="myInput" class="searchBox" type="text" placeholder="Busca GIFOS y más">
-                </div>
-                <i class="fa fa-search searchBtn"></i>
-            </form>
-        </div>
-
-        <div class="trendingTopics">
-            <h4>Trending:</h4>
-        </div>
-
-        <div id="searchTerm"></div>
-        <div id="searchResult"></div>
-        <div id="verMasCont"></div>
+        <div id="uplResult"></div>
 
     </section>
 
@@ -95,12 +80,12 @@
         <div id="modal" class="modal">
             <span class="close cursor" onclick="closeModal()">&times;</span>
             <div class="modal-content">
-        </div>
+            </div>
         </div>
 
-        <div id="modal2" class="modal">
-            <span class="close cursor" onclick="closeModal2()">&times;</span>
-            <div class="modal-content2">
+        <div id="modal4" class="modal">
+            <span class="close cursor" onclick="closeModal3()">&times;</span>
+            <div class="modal-content4">
             </div>
         </div>
     </section>
@@ -119,8 +104,7 @@
     </footer>
 
     <script src="script.js"></script>
-    <script src="search.js"></script>
-    <script src="apiReq.js"></script>
+    <script src="misGifos.js"></script>
     <script src="trendingReq.js"></script>
     
     

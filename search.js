@@ -59,7 +59,7 @@ const createImages = (images) => {
     gifoDwnld.classList.add('gifoDwnld');
     const gifoExp = document.createElement('span');
     gifoExp.classList.add('gifoExp');
-    gifoExp.setAttribute("onclick","openModal2("+(cont)+")");
+    gifoExp.setAttribute("onclick","openModal2("+(index)+")");
 
     const gifoCard = document.createElement('div');
     gifoCard.classList.add('gifoCard');
@@ -209,6 +209,11 @@ button.addEventListener("click", async () => {
   offset += limit + 1;
   let texto = document.getElementsByClassName('searchBox')[0].value;
   busqueda = texto;
+
+  document.getElementById("searchResult").style.display = 'flex';
+  document.getElementById("searchTerm").style.display = 'inline';
+  document.getElementById("verMasCont").style.display = 'inline';
+
   document.getElementById("searchResult").innerHTML = '';
   document.getElementById("searchTerm").innerHTML = '';
 
