@@ -7,9 +7,17 @@ function allStorage() {
     favSize = keys.length;
 
     while ( (favSize--) > 0 ) {
-        gifosFavoritos.push(localStorage.getItem(keys[favSize]) );
+
+        if((keys[favSize][0]) == 'f'){
+
+          gifosFavoritos.push(localStorage.getItem(keys[favSize]) );
+
+        }
+        
     }
-    
+
+    console.log(gifosFavoritos);
+
     return gifosFavoritos;
 
 }
