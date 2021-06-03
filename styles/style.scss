@@ -639,7 +639,7 @@ body{
   }
   
   /* Hide the slides by default */
-  .slides, .searchCard, .favCard{
+  .slides, .searchCard, .favCard, .uplCard{
     display: none;
     align-items: center;
     flex-direction: column;
