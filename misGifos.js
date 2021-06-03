@@ -1,22 +1,39 @@
 
-let gifosUplArray = [];
+let gifosUpl = [];
 
 function getStorage() {
 
-    let gifosUpl = localStorage.getItem('uplGifos');
-    gifosUplArray = JSON.parse(gifosUpl);
-    return gifosUplArray;
+    gifosUpl = JSON.parse(localStorage.getItem('uplGifos'));
+    return gifosUpl;
 
 }
-
 
 function cargarUploads() {
 
     getStorage();
 
-    for(i = 0; i < gifosUplArray.length; i++){
+    // SIN RESULTADO
 
-        let uplRes = gifosUplArray[i];
+    if(gifosUpl == null){
+      
+      document.getElementById("uplResult").innerHTML = '';
+      const nores = document.createElement("div");
+      const noresImg = document.createElement("img");
+      const noresTxt = document.createElement("h4");
+      noresImg.src = 'images/icons/icon-fav-sin-contenido.svg';
+      noresTxt.innerHTML = '¡Anímate a crear tu primer GIFO!';
+      nores.appendChild(noresImg);
+      nores.appendChild(noresTxt);
+      nores.classList.add("noResult");
+      document.getElementById("uplResult").appendChild(nores);
+    }
+
+    else{
+    
+
+    for(i = 0; i < gifosUpl.length; i++){
+
+        let uplRes = gifosUpl[i];
 
         const gifo = document.createElement("img");
         gifo.classList.add('gifo');
@@ -90,26 +107,8 @@ function cargarUploads() {
 
         document.getElementsByClassName("modal-content4")[0].appendChild(uplCard);
 
-
     }
-
-
-    // SIN RESULTADO
-    
-    if (gifosUplArray.length == 0){
-        console.log('em')
-        document.getElementById("uplResult").innerHTML = '';
-        const nores = document.createElement("div");
-        const noresImg = document.createElement("img");
-        const noresTxt = document.createElement("h4");
-        noresImg.src = 'images/icons/icon-fav-sin-contenido.svg';
-        noresTxt.innerHTML = '¡Anímate a crear tu primer GIFO!';
-        nores.appendChild(noresImg);
-        nores.appendChild(noresTxt);
-        nores.classList.add("noResult");
-        document.getElementById("uplResult").appendChild(nores);
-      }
-
+  }
 }
 
 cargarUploads();
