@@ -4,6 +4,7 @@
     const searchInput = document.getElementById('search');
     const searchWrapper = document.querySelector('.wrapper');
     const resultsWrapper = document.querySelector('.results');
+    let mainbanner = document.getElementsByClassName('mainbanner')[0];
 
 
     function autocomp() {
@@ -23,7 +24,6 @@
                 
                 for (i = 0; i < resultLength; i++){
                      let resTag = result.data[i].name;
-                     console.log(resTag);
                      resTags.push(resTag);
                 }       
                 
@@ -35,11 +35,16 @@
             .catch(error => console.log('error', error));
 
     }
+
+
     
+    function closeSrch() {
+        return searchWrapper.classList.remove('show');
+    }
     
     
     function renderResults(results) {
-        if (!results.length) {
+        if (!results.length){
         return searchWrapper.classList.remove('show');
         }
     
