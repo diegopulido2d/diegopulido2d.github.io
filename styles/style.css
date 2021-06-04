@@ -207,28 +207,15 @@ body nav ul h4:hover {
 }
 
 .mainbanner .searchBar, .mainbanner2 .searchBar {
-  border: 2px solid #572EE5;
-  border-radius: 40px;
+  display: inline;
   width: 60%;
-  padding: 5px 40px;
-  margin-bottom: 40px;
 }
 
-.mainbanner .searchBar form, .mainbanner2 .searchBar form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
+.mainbanner .searchBar .wrapper, .mainbanner2 .searchBar .wrapper {
+  border: 2px solid #572EE5;
+  border-radius: 40px;
+  padding: 5px 40px;
+  margin-bottom: 40px;
 }
 
 .mainbanner .searchBar .autocomplete, .mainbanner2 .searchBar .autocomplete {
@@ -251,34 +238,36 @@ body nav ul h4:hover {
   color: #572EE5;
 }
 
-.mainbanner .searchBar .autocomplete-items, .mainbanner2 .searchBar .autocomplete-items {
-  position: absolute;
-  border: 1px solid #d4d4d4;
-  border-bottom: none;
-  border-top: none;
-  z-index: 99;
-  /*position the autocomplete items to be the same width as the container:*/
-  top: 100%;
-  left: 0;
-  right: 0;
+.mainbanner .searchBar .results, .mainbanner2 .searchBar .results {
+  padding: 0px;
 }
 
-.mainbanner .searchBar .autocomplete-items div, .mainbanner2 .searchBar .autocomplete-items div {
+.mainbanner .searchBar .results ul, .mainbanner2 .searchBar .results ul {
+  margin: 0;
+  padding: 0;
+}
+
+.mainbanner .searchBar .results ul li, .mainbanner2 .searchBar .results ul li {
+  list-style: none;
+  border-radius: 3px;
+  opacity: 0;
+  display: none;
+  padding: 8px 12px;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+}
+
+.mainbanner .searchBar .show .results ul li, .mainbanner2 .searchBar .show .results ul li {
+  opacity: 1;
+  display: block;
+}
+
+.mainbanner .searchBar .show .results, .mainbanner2 .searchBar .show .results {
   padding: 10px;
-  cursor: pointer;
-  background-color: #fff;
-  border-bottom: 1px solid #d4d4d4;
 }
 
-.mainbanner .searchBar .autocomplete-items div:hover, .mainbanner2 .searchBar .autocomplete-items div:hover {
-  /*when hovering an item:*/
-  background-color: #e9e9e9;
-}
-
-.mainbanner .searchBar .autocomplete-active, .mainbanner2 .searchBar .autocomplete-active {
-  /*when navigating through the items using the arrow keys:*/
-  background-color: DodgerBlue !important;
-  color: #ffffff;
+.mainbanner .searchBar .results ul li:hover, .mainbanner2 .searchBar .results ul li:hover {
+  background: #ececec;
 }
 
 .mainbanner .trendingTopics, .mainbanner2 .trendingTopics {

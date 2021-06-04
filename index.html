@@ -55,12 +55,16 @@
         <img src="./images/ilustra_header.svg" alt="">
 
         <div class="searchBar">
-            <form autocomplete="off" action="">
-                <div class="autocomplete">
-                  <input id="myInput" class="searchBox" type="text" placeholder="Busca GIFOS y más">
-                </div>
+        <div class="wrapper">
+            <div class="autocomplete">
+                <input type="text" name="search" id="search" placeholder="Busca GIFOS y más" autocomplete="chrome-off" class="searchBox" oninput="autocomp()">
                 <i class="fa fa-search searchBtn"></i>
-            </form>
+            </div>
+            <div class="results">
+                <ul>
+                </ul>
+            </div>
+        </div>
         </div>
 
         <div class="trendingTopics">
@@ -121,6 +125,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="autocomplete.js"></script>
     <script src="search.js"></script>
     <script src="apiReq.js"></script>
     <script src="trendingReq.js"></script>
