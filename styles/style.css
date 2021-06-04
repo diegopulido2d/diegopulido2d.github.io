@@ -243,6 +243,8 @@ body nav ul h4:hover {
   font-size: 14px;
   border: transparent;
   width: 90%;
+  background-color: transparent;
+  color: #572EE5;
 }
 
 .mainbanner .searchBar i, .mainbanner2 .searchBar i {
@@ -494,7 +496,12 @@ body nav ul h4:hover {
 }
 
 .imgExpandidaDet .imgExpandidaInfo h4, .imgExpandidaDet h5 {
-  margin: 0;
+  margin: 8px 0;
+  color: #572EE5;
+}
+
+.imgExpandidaDet .imgExpandidaAct span {
+  padding: 0 5px;
 }
 
 footer {
@@ -900,19 +907,19 @@ footer .socialmedia ul li span:hover {
 
 .darkBg {
   background-color: #37383C !important;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .rllyDarkBg {
   background-color: #222326 !important;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .darkTxt {
   color: white !important;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 /*# sourceMappingURL=style.css.map */

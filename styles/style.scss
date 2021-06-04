@@ -220,6 +220,8 @@ body{
                     font-size: 14px;
                     border: transparent;
                     width: 90%;
+                    background-color: transparent;
+                    color: #572EE5;
                   }
 
                   i{
@@ -438,18 +440,6 @@ body{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
         .imgExpandidaDet{
             margin-top: 50px;
             width: 60%;
@@ -459,7 +449,12 @@ body{
             align-items: center;
 
             .imgExpandidaInfo h4, h5{
-                margin: 0;
+                margin: 8px 0;
+                color: #572EE5;
+             }
+
+             .imgExpandidaAct span{
+                padding: 0 5px;
              }
 
 
@@ -862,15 +857,15 @@ body{
 
   .darkBg{
       background-color: #37383C !important;
-      transition: 0.2s;
+      transition: 0.3s;
   }
 
   .rllyDarkBg{
     background-color: #222326 !important;
-    transition: 0.2s;
+    transition: 0.3s;
   }
 
   .darkTxt{
       color: white !important;
-      transition: 0.2s;
+      transition: 0.3s;
   }
