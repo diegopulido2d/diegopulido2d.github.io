@@ -445,9 +445,17 @@ body{
             justify-content: space-around;
             align-items: center;
 
-            .imgExpandidaInfo h4, h5{
-                margin: 8px 0;
-                color: #572EE5;
+            .imgExpandidaInfo{
+
+                h4{
+                    margin: 8px 0;
+                    color: #572EE5;
+                }
+
+                h5{
+                    margin: 8px 0;
+                    color: rgb(0,243,187);
+                }
              }
 
              .imgExpandidaAct span{

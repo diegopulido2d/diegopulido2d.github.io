@@ -492,9 +492,14 @@ body nav ul h4:hover {
           align-items: center;
 }
 
-.imgExpandidaDet .imgExpandidaInfo h4, .imgExpandidaDet h5 {
+.imgExpandidaDet .imgExpandidaInfo h4 {
   margin: 8px 0;
   color: #572EE5;
+}
+
+.imgExpandidaDet .imgExpandidaInfo h5 {
+  margin: 8px 0;
+  color: #00f3bb;
 }
 
 .imgExpandidaDet .imgExpandidaAct span {
