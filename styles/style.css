@@ -208,25 +208,30 @@ body nav ul h4:hover {
 
 .mainbanner .searchBar, .mainbanner2 .searchBar {
   display: inline;
-  width: 60%;
-}
-
-.mainbanner .searchBar .wrapper, .mainbanner2 .searchBar .wrapper {
-  border: 2px solid #572EE5;
-  border-radius: 40px;
-  padding: 5px 40px;
-  margin-bottom: 40px;
+  width: 50%;
 }
 
 .mainbanner .searchBar .autocomplete, .mainbanner2 .searchBar .autocomplete {
-  /*the container must be positioned relative:*/
-  width: 100%;
   position: relative;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 2px solid #572EE5;
+  border-radius: 40px;
+  padding: 10px 20px;
 }
 
 .mainbanner .searchBar input, .mainbanner2 .searchBar input {
-  padding: 10px;
   font-size: 14px;
   border: transparent;
   width: 90%;
@@ -240,6 +245,7 @@ body nav ul h4:hover {
 
 .mainbanner .searchBar .results, .mainbanner2 .searchBar .results {
   padding: 0px;
+  position: absolute;
 }
 
 .mainbanner .searchBar .results ul, .mainbanner2 .searchBar .results ul {
@@ -253,13 +259,14 @@ body nav ul h4:hover {
   opacity: 0;
   display: none;
   padding: 8px 12px;
-  -webkit-transition: all .5s linear;
-  transition: all .5s linear;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 .mainbanner .searchBar .show .results ul li, .mainbanner2 .searchBar .show .results ul li {
   opacity: 1;
   display: block;
+  background: white;
 }
 
 .mainbanner .searchBar .show .results, .mainbanner2 .searchBar .show .results {
@@ -267,12 +274,13 @@ body nav ul h4:hover {
 }
 
 .mainbanner .searchBar .results ul li:hover, .mainbanner2 .searchBar .results ul li:hover {
-  background: #ececec;
+  background: #572EE5;
+  color: white;
 }
 
 .mainbanner .trendingTopics, .mainbanner2 .trendingTopics {
   text-align: center;
-  margin-bottom: 60px;
+  margin: 60px 0;
   cursor: pointer;
 }
 
@@ -469,7 +477,7 @@ body nav ul h4:hover {
 }
 
 .imgExpandidaDet {
-  margin-top: 50px;
+  margin-top: 20px;
   width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;

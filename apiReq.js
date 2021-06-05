@@ -6,7 +6,11 @@
     let trndgs = [];
     let bsqd = [];
 
+    let fav = [];
     let cont9 = 0;
+
+
+    //CREAR TRENDING TOPCS
 
     fetch(trendingTopicsReq)
     .then(response => response.json())
@@ -36,6 +40,12 @@
     .catch(error => console.log('error', error));
 
 
+
+
+    //TRENDING TOPICS REQUEST
+
+
+
     function searchTerm(s) {
 
         document.getElementById("searchResult").style.display = 'flex';
@@ -44,6 +54,7 @@
 
         document.getElementById("searchResult").innerHTML = '';
         document.getElementById("searchTerm").innerHTML = '';
+        document.getElementById("verMasCont").innerHTML = '';
 
         const searchTerm = document.createElement("h2");
         searchTerm.innerHTML = bsqd[s];
@@ -59,6 +70,20 @@
         .then(images => {
 
             for (index = 0; index < 12; index++){
+
+            let favorito = {
+              gifo: '',
+              username: '',
+              title: ''
+          }
+
+            fav.push(favorito);
+            
+            fav[cont9].gifo = images.data[index].images.fixed_height.url;
+            fav[cont9].original = images.data[index].images.original.url;
+            fav[cont9].username = images.data[index].username;
+            fav[cont9].title = images.data[index].title; 
+
 
 
             // SEARCH CARDS
@@ -77,7 +102,7 @@
 
             const gifoFav = document.createElement('span');
             gifoFav.classList.add('gifoFav');
-            gifoFav.setAttribute("onclick","gifoFavoritoSearch("+(cont9)+")");
+            gifoFav.setAttribute("onclick","gifoTrendingTopic("+(cont9)+")");
             const gifoDwnld = document.createElement('span');
             gifoDwnld.classList.add('gifoDwnld');
             const gifoExp = document.createElement('span');
@@ -141,7 +166,7 @@
 
             const imgExpGifoFav = document.createElement('span');
             imgExpGifoFav.classList.add('imgExpGifoFav');
-            imgExpGifoFav.setAttribute("onclick","gifoFavoritoSearch("+(cont9)+")");
+            imgExpGifoFav.setAttribute("onclick","gifoTrendingTopic("+(cont9)+")");
             const imgExpGifoDwld = document.createElement('span');
             imgExpGifoDwld.classList.add('imgExpGifoDwld');
 
@@ -177,6 +202,13 @@
 
         });
         
+    }
+
+
+    // GIFO FAVORITO
+
+    function gifoTrendingTopic(n){
+      localStorage.setItem('favoritoTrendingTopic'+n, JSON.stringify(fav[n]));
     }
 
 

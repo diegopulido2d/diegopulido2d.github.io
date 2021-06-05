@@ -36,8 +36,6 @@
 
     }
 
-
-    
     function closeSrch() {
         return searchWrapper.classList.remove('show');
     }
@@ -49,8 +47,8 @@
         }
     
         const content = results
-        .map((item) => {
-            return `<li>${item}</li>`;
+        .map((item, index) => {
+            return `<li class="listItem" onclick="searchTerm(${index})">${item}</li>`;
         })
         .join('');
     

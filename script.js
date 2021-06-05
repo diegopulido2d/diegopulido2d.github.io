@@ -25,24 +25,6 @@ function rarr() {
   
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
   let mdDiur = document.getElementsByClassName('mdDiu')[0];
   let mdDiurMB = document.getElementsByClassName('mdDiu')[1];
   let mdNoct = document.getElementsByClassName('mdNoc')[0];
