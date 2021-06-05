@@ -96,6 +96,8 @@ function rarr() {
       let modal = document.getElementsByClassName('modal');
       modal[0].classList.add('rllyDarkBg');
       modal[1].classList.add('rllyDarkBg');
+      modal[2].classList.add('rllyDarkBg');
+      modal[3].classList.add('rllyDarkBg');
 
 
     }
@@ -247,6 +249,8 @@ function rarr() {
       let modal = document.getElementsByClassName('modal');
       modal[0].classList.remove('rllyDarkBg');
       modal[1].classList.remove('rllyDarkBg');
+      modal[2].classList.remove('rllyDarkBg');
+      modal[3].classList.remove('rllyDarkBg');
 
     }
 

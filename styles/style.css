@@ -255,7 +255,6 @@ body nav ul h4:hover {
 
 .mainbanner .searchBar .results ul li, .mainbanner2 .searchBar .results ul li {
   list-style: none;
-  border-radius: 3px;
   opacity: 0;
   display: none;
   padding: 8px 12px;
@@ -270,7 +269,7 @@ body nav ul h4:hover {
 }
 
 .mainbanner .searchBar .show .results, .mainbanner2 .searchBar .show .results {
-  padding: 10px;
+  margin: 0 15px;
 }
 
 .mainbanner .searchBar .results ul li:hover, .mainbanner2 .searchBar .results ul li:hover {
@@ -660,7 +659,7 @@ footer .socialmedia ul li span:hover {
   background-color: white;
 }
 
-.modal-content, .modal-content2, .modal-content3, .modal-content4, .modal-content9 {
+.modal-content, .modal-content2, .modal-content3, .modal-content4, .modal-content9, .modal-contentX {
   position: relative;
   margin: auto;
   padding: 0;
@@ -686,7 +685,7 @@ footer .socialmedia ul li span:hover {
 }
 
 /* Hide the slides by default */
-.slides, .searchCard, .favCard, .uplCard, .ttCard {
+.slides, .searchCard, .favCard, .uplCard, .ttCard, .sggsCard {
   display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
