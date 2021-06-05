@@ -260,6 +260,7 @@ body{
             .trendingTopics{
                 text-align: center;
                 margin-bottom: 60px;
+                cursor: pointer;
 
                 h4, span{
                     color:#572EE5;
@@ -613,7 +614,7 @@ body{
   }
   
 
-  .modal-content, .modal-content2, .modal-content3, .modal-content4{
+  .modal-content, .modal-content2, .modal-content3, .modal-content4, .modal-content9{
     position: relative;
     margin: auto;
     padding: 0;
@@ -640,7 +641,7 @@ body{
   }
   
   /* Hide the slides by default */
-  .slides, .searchCard, .favCard, .uplCard{
+  .slides, .searchCard, .favCard, .uplCard, .ttCard{
     display: none;
     align-items: center;
     flex-direction: column;

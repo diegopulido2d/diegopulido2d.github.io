@@ -273,6 +273,7 @@ body nav ul h4:hover {
 .mainbanner .trendingTopics, .mainbanner2 .trendingTopics {
   text-align: center;
   margin-bottom: 60px;
+  cursor: pointer;
 }
 
 .mainbanner .trendingTopics h4, .mainbanner .trendingTopics span, .mainbanner2 .trendingTopics h4, .mainbanner2 .trendingTopics span {
@@ -651,7 +652,7 @@ footer .socialmedia ul li span:hover {
   background-color: white;
 }
 
-.modal-content, .modal-content2, .modal-content3, .modal-content4 {
+.modal-content, .modal-content2, .modal-content3, .modal-content4, .modal-content9 {
   position: relative;
   margin: auto;
   padding: 0;
@@ -677,7 +678,7 @@ footer .socialmedia ul li span:hover {
 }
 
 /* Hide the slides by default */
-.slides, .searchCard, .favCard, .uplCard {
+.slides, .searchCard, .favCard, .uplCard, .ttCard {
   display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
