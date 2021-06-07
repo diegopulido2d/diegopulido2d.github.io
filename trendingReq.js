@@ -44,8 +44,16 @@
             const gifoFav = document.createElement('span');
             gifoFav.classList.add('gifoFav');
             gifoFav.setAttribute("onclick","gifoFavoritoTrending("+(cont2)+")");
-            const gifoDwnld = document.createElement('span');
+
+
+            console.log(result.data[i]);
+            const gifoDwnld = document.createElement('a');
             gifoDwnld.classList.add('gifoDwnld');
+            gifoDwnld.href = `data:application/octet-stream;base64,${encodeURIComponent(result.data[i].url)}`;
+            gifoDwnld.setAttribute('download', 'gifoDownload.gif');
+
+
+
             const gifoExp = document.createElement('span');
             gifoExp.classList.add('gifoExp');
             gifoExp.setAttribute("onclick","openModal("+(cont2)+")");

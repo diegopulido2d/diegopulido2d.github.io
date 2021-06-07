@@ -430,7 +430,7 @@ body nav ul h4:hover {
   display: none;
 }
 
-.gifoCard .gifoOverlay .gifoOverlayAct span, .gifoCardTrending .gifoOverlay .gifoOverlayAct span {
+.gifoCard .gifoOverlay .gifoOverlayAct span, .gifoCard .gifoOverlay .gifoOverlayAct a, .gifoCardTrending .gifoOverlay .gifoOverlayAct span, .gifoCardTrending .gifoOverlay .gifoOverlayAct a {
   padding: 6px 3px;
   cursor: pointer;
 }
