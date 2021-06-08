@@ -935,6 +935,9 @@ footer .socialmedia ul li span:hover {
   #searchResult {
     padding: 20px;
   }
+  #searchResult .gifoCard {
+    width: 100%;
+  }
   .trendingSlider {
     padding: 50px 20px;
   }
