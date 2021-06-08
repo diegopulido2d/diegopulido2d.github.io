@@ -328,7 +328,6 @@ body{
 
 
 
-
         .searchBtn{
             cursor: pointer;
         }
@@ -917,6 +916,39 @@ body{
 
         .gifoCard{
             width: 100%;
+
+            .gifo{
+                width: 100%;
+            }
+
+        }
+
+    }
+
+    #favResult{
+        padding: 20px;
+
+        .gifoCard{
+            width: 100%;
+
+            .gifo{
+                width: 100%;
+            }
+
+        }
+
+    }
+
+    #uplResult{
+        padding: 20px;
+
+        .gifoCard{
+            width: 100%;
+
+            .gifo{
+                width: 100%;
+            }
+
         }
 
     }

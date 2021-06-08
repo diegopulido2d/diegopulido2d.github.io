@@ -47,8 +47,9 @@ function cargarUploads() {
         iconexp.src = "images/icons/icon-max-normal.svg";
         iconexp.classList.add('expandIcon');
 
-        const gifoDwnld = document.createElement('span');
+        const gifoDwnld = document.createElement('a');
         gifoDwnld.classList.add('gifoDwnld');
+        gifoDwnld.download = 'gifoDownload.gif';
         const gifoExp = document.createElement('span');
         gifoExp.classList.add('gifoExp');
         gifoExp.setAttribute("onclick","openModal3("+(i)+")");
@@ -98,8 +99,10 @@ function cargarUploads() {
         imgExpDwnld.src = "images/icons/icon-download.svg";
         imgExpDwnld.classList.add('downloadIcon');
 
-        const imgExpGifoDwld = document.createElement('span');
+
+        const imgExpGifoDwld = document.createElement('a');
         imgExpGifoDwld.classList.add('imgExpGifoDwld');
+        imgExpGifoDwld.download = 'gifoDownload.gif';
 
 
         imgExpGifoDwld.appendChild(imgExpDwnld);
@@ -113,6 +116,15 @@ function cargarUploads() {
 
 
         document.getElementsByClassName("modal-content4")[0].appendChild(uplCard);
+
+
+        let url = fetch(uplRes.gifo);
+        url.then(response => response.blob())
+        .then(result => { 
+            const urlBlob = URL.createObjectURL(result);
+            gifoDwnld.href = urlBlob;
+            imgExpGifoDwld.href = urlBlob;
+        });
 
     }
   }

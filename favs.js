@@ -42,8 +42,9 @@ function cargarFavoritos() {
         iconexp.classList.add('expandIcon');
 
 
-        const gifoDwnld = document.createElement('span');
+        const gifoDwnld = document.createElement('a');
         gifoDwnld.classList.add('gifoDwnld');
+        gifoDwnld.download = 'gifoDownload.gif';
         const gifoExp = document.createElement('span');
         gifoExp.classList.add('gifoExp');
         gifoExp.setAttribute("onclick","openModal2("+(i)+")");
@@ -102,8 +103,9 @@ function cargarFavoritos() {
         imgExpDwnld.src = "images/icons/icon-download.svg";
         imgExpDwnld.classList.add('downloadIcon');
 
-        const imgExpGifoDwld = document.createElement('span');
+        const imgExpGifoDwld = document.createElement('a');
         imgExpGifoDwld.classList.add('imgExpGifoDwld');
+        imgExpGifoDwld.download = 'gifoDownload.gif';
 
         const imgExpandidaUser = document.createElement('h5');
         imgExpandidaUser.classList.add('imgExpandidaUser');
@@ -129,6 +131,14 @@ function cargarFavoritos() {
         document.getElementsByClassName("modal-content3")[0].appendChild(favCard);
 
 
+
+        let url = fetch(fvrt.original);
+        url.then(response => response.blob())
+        .then(result => { 
+            const urlBlob = URL.createObjectURL(result);
+            gifoDwnld.href = urlBlob;
+            imgExpGifoDwld.href = urlBlob;
+        });
 
 
     }

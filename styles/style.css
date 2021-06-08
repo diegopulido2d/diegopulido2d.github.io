@@ -938,6 +938,27 @@ footer .socialmedia ul li span:hover {
   #searchResult .gifoCard {
     width: 100%;
   }
+  #searchResult .gifoCard .gifo {
+    width: 100%;
+  }
+  #favResult {
+    padding: 20px;
+  }
+  #favResult .gifoCard {
+    width: 100%;
+  }
+  #favResult .gifoCard .gifo {
+    width: 100%;
+  }
+  #uplResult {
+    padding: 20px;
+  }
+  #uplResult .gifoCard {
+    width: 100%;
+  }
+  #uplResult .gifoCard .gifo {
+    width: 100%;
+  }
   .trendingSlider {
     padding: 50px 20px;
   }
