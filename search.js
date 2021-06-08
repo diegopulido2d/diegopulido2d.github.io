@@ -180,7 +180,7 @@ const createImages = (images) => {
 
 
 
-    url = fetch(images.data[index].images.original.url);
+    let url = fetch(images.data[index].images.original.url);
     url.then(response => response.blob())
     .then(result => { 
         const urlBlob = URL.createObjectURL(result);
