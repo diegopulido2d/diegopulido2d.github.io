@@ -142,6 +142,7 @@ body nav ul h4:hover {
 .dropdown_menu {
   position: absolute;
   top: -80px;
+  right: -80px;
 }
 
 #menumobile:checked ~ .dropdown_menu {
