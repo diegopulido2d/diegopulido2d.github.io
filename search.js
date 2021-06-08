@@ -47,19 +47,23 @@ const createImages = (images) => {
 
     const iconfav = document.createElement("img");
     iconfav.src = "images/icons/icon-fav.svg";
+    iconfav.classList.add('favoriteIcon');
     const iconDwnld = document.createElement("img");
     iconDwnld.src = "images/icons/icon-download.svg";
+    iconDwnld.classList.add('downloadIcon');
     const iconexp = document.createElement("img");
     iconexp.src = "images/icons/icon-max-normal.svg";
+    iconexp.classList.add('expandIcon');
 
     const gifoFav = document.createElement('span');
     gifoFav.classList.add('gifoFav');
     gifoFav.setAttribute("onclick","gifoFavoritoSearch("+(cont)+")");
-    const gifoDwnld = document.createElement('span');
+    const gifoDwnld = document.createElement('a');
     gifoDwnld.classList.add('gifoDwnld');
+    gifoDwnld.download = 'gifoDownload.gif';
     const gifoExp = document.createElement('span');
     gifoExp.classList.add('gifoExp');
-    gifoExp.setAttribute("onclick","openModal2("+(index)+")");
+    gifoExp.setAttribute("onclick","openModal2("+(cont)+")");
 
     const gifoCard = document.createElement('div');
     gifoCard.classList.add('gifoCard');
@@ -128,19 +132,25 @@ const createImages = (images) => {
     const imgExpandidaAct = document.createElement('div');
     imgExpandidaAct.classList.add('imgExpandidaAct');
 
+
     const imgExpandida = document.createElement('img');
     imgExpandida.src = images.data[index].images.original.url;
     imgExpandida.classList.add('imgExpandida');
+
     const imgExpFav = document.createElement('img');
     imgExpFav.src = "images/icons/icon-fav.svg";
+    imgExpFav.classList.add('favoriteIcon');
     const imgExpDwnld = document.createElement('img');
     imgExpDwnld.src = "images/icons/icon-download.svg";
+    imgExpDwnld.classList.add('downloadIcon');
+
 
     const imgExpGifoFav = document.createElement('span');
     imgExpGifoFav.classList.add('imgExpGifoFav');
     imgExpGifoFav.setAttribute("onclick","gifoFavoritoSearch("+(cont)+")");
-    const imgExpGifoDwld = document.createElement('span');
+    const imgExpGifoDwld = document.createElement('a');
     imgExpGifoDwld.classList.add('imgExpGifoDwld');
+    imgExpGifoDwld.download = 'gifoDownload.gif';
 
     const imgExpandidaUser = document.createElement('h5');
     imgExpandidaUser.classList.add('imgExpandidaUser');
@@ -167,6 +177,18 @@ const createImages = (images) => {
 
 
     document.getElementsByClassName("modal-content2")[0].appendChild(searchCard);
+
+
+
+    url = fetch(images.data[index].images.original.url);
+    url.then(response => response.blob())
+    .then(result => { 
+        const urlBlob = URL.createObjectURL(result);
+        gifoDwnld.href = urlBlob;
+        imgExpGifoDwld.href = urlBlob;
+    });
+
+
 
     cont++;
 

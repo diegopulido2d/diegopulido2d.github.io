@@ -39,10 +39,13 @@ function cargarUploads() {
         gifo.classList.add('gifo');
         gifo.src = uplRes.gifo;
 
+        
         const iconDwnld = document.createElement("img");
         iconDwnld.src = "images/icons/icon-download.svg";
+        iconDwnld.classList.add('downloadIcon');
         const iconexp = document.createElement("img");
         iconexp.src = "images/icons/icon-max-normal.svg";
+        iconexp.classList.add('expandIcon');
 
         const gifoDwnld = document.createElement('span');
         gifoDwnld.classList.add('gifoDwnld');
@@ -90,10 +93,14 @@ function cargarUploads() {
         const imgExpandida = document.createElement('img');
         imgExpandida.src = uplRes.gifo;
         imgExpandida.classList.add('imgExpandida');
+
         const imgExpDwnld = document.createElement('img');
         imgExpDwnld.src = "images/icons/icon-download.svg";
+        imgExpDwnld.classList.add('downloadIcon');
+
         const imgExpGifoDwld = document.createElement('span');
         imgExpGifoDwld.classList.add('imgExpGifoDwld');
+
 
         imgExpGifoDwld.appendChild(imgExpDwnld);
         imgExpandidaAct.appendChild(imgExpGifoDwld);

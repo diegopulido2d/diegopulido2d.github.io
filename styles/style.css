@@ -494,7 +494,7 @@ body nav ul h4:hover {
 }
 
 .imgExpandidaDet .imgExpandidaInfo h4 {
-  margin: 8px 0;
+  margin: 8px;
   color: #572EE5;
 }
 
@@ -636,6 +636,7 @@ footer .socialmedia ul li span:hover {
   right: 25px;
   font-size: 35px;
   font-weight: light;
+  z-index: 500;
 }
 
 .close:hover,
@@ -939,6 +940,14 @@ footer .socialmedia ul li span:hover {
   }
   .trendingSlider p {
     text-align: center;
+  }
+  .imgExpandidaDet {
+    width: 100%;
+  }
+  .imgExpandidaDet .imgExpandidaAct {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .crearGifoSec {
     -webkit-box-orient: vertical;
