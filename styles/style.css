@@ -85,7 +85,7 @@ body nav .menu_mobile input:checked ~ span {
   opacity: 1;
   -webkit-transform: rotate(45deg) translate(-2px, -1px);
           transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+  background: #572EE5;
 }
 
 body nav .menu_mobile input:checked ~ span:nth-last-child(3) {
@@ -140,12 +140,8 @@ body nav ul h4:hover {
 }
 
 .dropdown_menu {
+  display: none;
   position: absolute;
-  top: -80px;
-  right: -80px;
-}
-
-#menumobile:checked ~ .dropdown_menu {
   background-color: rgba(76, 42, 218, 0.9);
   top: 68px;
   left: 0px;
@@ -154,7 +150,7 @@ body nav ul h4:hover {
   z-index: 99;
 }
 
-#menumobile:checked ~ .dropdown_menu ul {
+.dropdown_menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -166,8 +162,12 @@ body nav ul h4:hover {
   text-align: center;
 }
 
-#menumobile:checked ~ .dropdown_menu ul li a {
+.dropdown_menu ul li a {
   color: white;
+}
+
+#menumobile:checked ~ .dropdown_menu {
+  display: inline;
 }
 
 .text_container h3 {
@@ -611,7 +611,7 @@ footer .socialmedia ul li span:hover {
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 300;
   left: 0;
   top: 0;
   width: 100%;
@@ -890,6 +890,8 @@ footer .socialmedia ul li span:hover {
         -ms-flex-align: center;
             align-items: center;
     padding: 10px 50px;
+    position: fixed;
+    width: -webkit-fill-available;
   }
   body nav .logo img {
     padding: 0;
@@ -897,9 +899,13 @@ footer .socialmedia ul li span:hover {
   body nav ul li {
     font-size: 20px;
     padding: 10px 0;
+    color: white;
+  }
+  .mainbanner2 {
+    padding-top: 80px;
   }
   .mainbanner {
-    padding: 20px;
+    padding: 70px 20px 20px 20px;
   }
   .mainbanner h1 {
     font-size: 28px;
