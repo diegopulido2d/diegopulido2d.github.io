@@ -662,6 +662,19 @@ body{
         width: 200px;
      }
 
+    
+
+     
+
+    #regForm{ 
+        padding-top: 100px;
+
+        .tab{
+            width: 100%;
+        }
+
+    }
+
 
   }
 
@@ -867,6 +880,9 @@ body{
         color: white;
     }
 
+    .dropdown_menu{
+        height: 800px;
+    }
 
     .mainbanner2{
         padding-top: 80px;
@@ -905,6 +921,17 @@ body{
         p{
             text-align: center;
         }
+    }
+
+
+    .crearGifoSec{
+        flex-direction: column;
+
+        .crearGifoImg{
+            display: none;
+        }
+
+
     }
 
     footer{

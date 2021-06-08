@@ -717,6 +717,14 @@ footer .socialmedia ul li span:hover {
   width: 200px;
 }
 
+.crearGifoSec #regForm {
+  padding-top: 100px;
+}
+
+.crearGifoSec #regForm .tab {
+  width: 100%;
+}
+
 /* Style the form */
 #regForm {
   padding: 40px;
@@ -901,6 +909,9 @@ footer .socialmedia ul li span:hover {
     padding: 10px 0;
     color: white;
   }
+  .dropdown_menu {
+    height: 800px;
+  }
   .mainbanner2 {
     padding-top: 80px;
   }
@@ -928,6 +939,15 @@ footer .socialmedia ul li span:hover {
   }
   .trendingSlider p {
     text-align: center;
+  }
+  .crearGifoSec {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .crearGifoSec .crearGifoImg {
+    display: none;
   }
   footer {
     text-align: center;
