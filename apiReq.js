@@ -96,12 +96,18 @@
             const iconfav = document.createElement("img");
             iconfav.src = "images/icons/icon-fav.svg";
             iconfav.classList.add('favoriteIcon');
+            iconfav.setAttribute("onmouseover","favHover(this)");
+            iconfav.setAttribute("onmouseout","favNormal(this)");
             const iconDwnld = document.createElement("img");
             iconDwnld.src = "images/icons/icon-download.svg";
             iconDwnld.classList.add('downloadIcon');
+            iconDwnld.setAttribute("onmouseover","dwHover(this)");
+            iconDwnld.setAttribute("onmouseout","dwNormal(this)");
             const iconexp = document.createElement("img");
             iconexp.src = "images/icons/icon-max-normal.svg";
             iconexp.classList.add('expandIcon');
+            iconexp.setAttribute("onmouseover","expHover(this)");
+            iconexp.setAttribute("onmouseout","expNormal(this)");
 
             const gifoFav = document.createElement('span');
             gifoFav.classList.add('gifoFav');
@@ -167,9 +173,13 @@
             const imgExpFav = document.createElement('img');
             imgExpFav.src = "images/icons/icon-fav.svg";
             imgExpFav.classList.add('favoriteIcon');
+            imgExpFav.setAttribute("onmouseover","favHover(this)");
+            imgExpFav.setAttribute("onmouseout","favNormal(this)");
             const imgExpDwnld = document.createElement('img');
             imgExpDwnld.src = "images/icons/icon-download.svg";
             imgExpDwnld.classList.add('downloadIcon');
+            imgExpDwnld.setAttribute("onmouseover","dwHover(this)");
+            imgExpDwnld.setAttribute("onmouseout","dwNormal(this)");
 
 
             const imgExpGifoFav = document.createElement('span');

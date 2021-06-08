@@ -43,9 +43,13 @@ function cargarUploads() {
         const iconDwnld = document.createElement("img");
         iconDwnld.src = "images/icons/icon-download.svg";
         iconDwnld.classList.add('downloadIcon');
+        iconDwnld.setAttribute("onmouseover","dwHover(this)");
+        iconDwnld.setAttribute("onmouseout","dwNormal(this)");
         const iconexp = document.createElement("img");
         iconexp.src = "images/icons/icon-max-normal.svg";
         iconexp.classList.add('expandIcon');
+        iconexp.setAttribute("onmouseover","expHover(this)");
+        iconexp.setAttribute("onmouseout","expNormal(this)");
 
         const gifoDwnld = document.createElement('a');
         gifoDwnld.classList.add('gifoDwnld');
@@ -98,7 +102,8 @@ function cargarUploads() {
         const imgExpDwnld = document.createElement('img');
         imgExpDwnld.src = "images/icons/icon-download.svg";
         imgExpDwnld.classList.add('downloadIcon');
-
+        imgExpDwnld.setAttribute("onmouseover","dwHover(this)");
+        imgExpDwnld.setAttribute("onmouseout","dwNormal(this)");
 
         const imgExpGifoDwld = document.createElement('a');
         imgExpGifoDwld.classList.add('imgExpGifoDwld');
