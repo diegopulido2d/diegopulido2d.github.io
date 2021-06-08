@@ -46,12 +46,18 @@
             gifoFav.setAttribute("onclick","gifoFavoritoTrending("+(cont2)+")");
 
 
-            console.log(result.data[i]);
             const gifoDwnld = document.createElement('a');
             gifoDwnld.classList.add('gifoDwnld');
-            gifoDwnld.href = `data:application/octet-stream;base64,${encodeURIComponent(result.data[i].url)}`;
-            gifoDwnld.setAttribute('download', 'gifoDownload.gif');
+            gifoDwnld.download = "gifoDownload.gif";
+    
 
+            const url = fetch(result.data[i].images.original.url);
+            url.then(response => response.blob())
+               .then(result => { 
+                   const urlBlob = URL.createObjectURL(result);
+                   console.log(urlBlob);
+               });
+            console.log(url);
 
 
             const gifoExp = document.createElement('span');

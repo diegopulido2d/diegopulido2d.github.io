@@ -562,51 +562,6 @@ footer .socialmedia ul li span:hover {
   color: #572EE5;
 }
 
-@media only screen and (max-width: 600px) {
-  .menu {
-    display: none;
-  }
-  nav {
-    padding: 20px 40px;
-  }
-  nav li {
-    padding: 10 0px;
-  }
-  section {
-    padding: 20px;
-  }
-  .mainbanner {
-    padding-top: 50px;
-  }
-  .mainbanner p {
-    width: 100%;
-  }
-  .mainbanner .searchBar {
-    width: 80%;
-  }
-  footer {
-    text-align: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  footer .socialmedia {
-    display: block;
-  }
-  footer .socialmedia ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    padding: 0 20px;
-  }
-}
-
 @media only screen and (min-width: 601px) {
   .menu_mobile {
     display: none;
@@ -923,5 +878,70 @@ footer .socialmedia ul li span:hover {
   color: white !important;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+@media only screen and (max-width: 600px) {
+  .menu {
+    display: none;
+  }
+  body nav {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px 50px;
+  }
+  body nav .logo img {
+    padding: 0;
+  }
+  body nav ul li {
+    font-size: 20px;
+    padding: 10px 0;
+  }
+  .mainbanner {
+    padding: 20px;
+  }
+  .mainbanner h1 {
+    font-size: 28px;
+    padding: 30px;
+  }
+  .mainbanner p {
+    width: 100%;
+  }
+  .mainbanner .searchBar {
+    width: 80%;
+  }
+  .mainbanner img {
+    width: 100%;
+  }
+  #searchResult {
+    padding: 20px;
+  }
+  .trendingSlider {
+    padding: 50px 20px;
+  }
+  .trendingSlider p {
+    text-align: center;
+  }
+  footer {
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .socialmedia {
+    display: block;
+  }
+  footer .socialmedia ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 0 20px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
