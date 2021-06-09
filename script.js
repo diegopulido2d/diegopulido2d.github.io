@@ -46,14 +46,26 @@ x.src= 'images/icons/icon-download.svg';
 
 
 
+
+
+
 function verModo(n) {
 
-  if(sessionStorage.getItem('modo') == null ){
-    setTimeout(sessionStorage.setItem('modo', 'diu'), 3000);
+  let modo = sessionStorage.getItem('modo');
+
+  if(modo == null ){
+
+    setTimeout(function(){
+      sessionStorage.setItem('modo', 'diu');
+     }, 1000);
+
   } else 
   
-  if(sessionStorage.getItem('modo') == 'noc'){
-    setTimeout(mdNoc(n), 3000);
+  if(modo == 'noc'){
+
+    setTimeout(function(){
+      mdNoc(n);
+     }, 1000);
   }
 
 }
