@@ -4,9 +4,9 @@ var count_click = 0;
 function rarr() {
     const trendingSl = document.getElementById('trendingSliderCont').children;
 
-    if(count_click > (-700)){
-      count_click = count_click + (-180);
-      trendingSl[0].style.marginLeft = count_click +'px';
+    if(count_click > (-100)){
+      count_click = count_click + (-25);
+      trendingSl[0].style.marginLeft = count_click +'%';
     }
 }
 
@@ -14,8 +14,8 @@ function larr() {
   const trendingSl = document.getElementById('trendingSliderCont').children;
   
   if(count_click < 0){
-    count_click = count_click + 180;
-    trendingSl[0].style.marginLeft = count_click +'px';
+    count_click = count_click + 25;
+    trendingSl[0].style.marginLeft = count_click +'%';
   }
 }
 
@@ -46,10 +46,17 @@ x.src= 'images/icons/icon-download.svg';
 
 
 
+function verModo(n) {
 
-
+  if(sessionStorage.getItem('modo') == null ){
+    sessionStorage.setItem('modo', 'diu');
+  } else 
   
+  if(sessionStorage.getItem('modo') == 'noc'){
+    mdNoc(n);
+  }
 
+}
 
 let mdDiur = document.getElementsByClassName('mdDiu')[0];
 let mdDiurMB = document.getElementsByClassName('mdDiu')[1];
@@ -86,7 +93,11 @@ function mdNoc(a){
   footerP[1].classList.add('darkTxt');
 
 
+  sessionStorage.setItem('modo', 'noc');
+
+
   if(a == 'home'){
+
 
     let mainbanner = document.getElementsByClassName('mainbanner')[0];
     mainbanner.classList.add('darkBg');
@@ -237,6 +248,8 @@ function mdDiu(a){
   footerP[0].classList.remove('darkTxt');
   footerP[1].classList.remove('darkTxt');
 
+  sessionStorage.setItem('modo', 'diu');
+
 
   if(a == 'home'){
     mainbanner = document.getElementsByClassName('mainbanner')[0];
@@ -364,6 +377,8 @@ function mdDiu(a){
     
 
   }
+
+  
   
 }
 
