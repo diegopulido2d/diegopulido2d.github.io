@@ -49,11 +49,11 @@ x.src= 'images/icons/icon-download.svg';
 function verModo(n) {
 
   if(sessionStorage.getItem('modo') == null ){
-    sessionStorage.setItem('modo', 'diu');
+    setTimeout(sessionStorage.setItem('modo', 'diu'), 3000);
   } else 
   
   if(sessionStorage.getItem('modo') == 'noc'){
-    mdNoc(n);
+    setTimeout(mdNoc(n), 3000);
   }
 
 }
