@@ -718,14 +718,6 @@ footer .socialmedia ul li span:hover {
   width: 200px;
 }
 
-.crearGifoSec #regForm {
-  padding-top: 100px;
-}
-
-.crearGifoSec #regForm .tab {
-  width: 100%;
-}
-
 /* Style the form */
 #regForm {
   padding: 40px;
@@ -740,7 +732,6 @@ footer .socialmedia ul li span:hover {
 
 .tab .tabCard {
   width: 100%;
-  height: 350px;
   border: #572EE5 solid 2px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -756,6 +747,7 @@ footer .socialmedia ul li span:hover {
 
 .tab .tabCard h3 {
   color: #572EE5;
+  padding-top: 100px;
 }
 
 .tab .tabCard b {
@@ -765,6 +757,7 @@ footer .socialmedia ul li span:hover {
 .tab .tabCard p {
   font-size: 12px;
   line-height: 24px;
+  padding-bottom: 100px;
 }
 
 .tab .tabCard .videoGifo {
@@ -980,6 +973,26 @@ footer .socialmedia ul li span:hover {
   }
   .crearGifoSec .crearGifoImg {
     display: none;
+  }
+  #regForm {
+    padding-top: 100px;
+  }
+  #regForm .tab {
+    width: 100%;
+  }
+  #regForm .tab h3, #regForm .tab p {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  #regForm .tab .recordControls {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 80px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   footer {
     text-align: center;
