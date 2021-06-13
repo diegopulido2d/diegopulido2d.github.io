@@ -6,6 +6,10 @@
     const resultsWrapper = document.querySelector('.results');
     let mainbanner = document.getElementsByClassName('mainbanner')[0];
 
+    let searchBtn = document.getElementsByClassName('searchBtn')[0];
+    let closeBtn = document.getElementsByClassName('closeBtn')[0];
+    let search1= document.getElementsByClassName('search1')[0];
+
     let sggstn = [];
     let favX = [];
     let contX = 0;
@@ -34,7 +38,10 @@
                 
                 if (input.length) {
                     renderResults(resTags);
-                }
+                    searchBtn.style.display = 'none';
+                    closeBtn.style.display = 'inline';
+                    search1.style.opacity = 1;
+                } 
                 
             })
             .catch(error => console.log('error', error));
@@ -42,7 +49,14 @@
     }
 
     function closeSrch() {
+        searchBtn.style.display = 'inline';
+        closeBtn.style.display = 'none';
+        search1.style.opacity = 0;
         return searchWrapper.classList.remove('show');
+    }
+
+    function resetSearch() {
+        searchInput.value = '';
     }
 
     
@@ -53,7 +67,7 @@
     
         const content = results
         .map((item, index) => {
-            return `<li class="listItem" onclick="searchSuggest(${index})">${item}</li>`;
+            return `<li class="listItem" onclick="searchSuggest(${index})"><span><img src="images/icons/icon-search.svg"></span>${item}</li>`;
         })
         .join('');
     
@@ -66,6 +80,8 @@
 
 
     function searchSuggest(s) {
+
+        searchInput.value = sggstn[s]
 
         document.getElementById("searchResult").style.display = 'flex';
         document.getElementById("searchTerm").style.display = 'inline';

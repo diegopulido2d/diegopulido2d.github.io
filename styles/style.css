@@ -244,7 +244,12 @@ body nav ul h4:hover {
   color: #572EE5;
 }
 
+.mainbanner .searchBar .search1, .mainbanner2 .searchBar .search1 {
+  opacity: 0;
+}
+
 .mainbanner .searchBar .results, .mainbanner2 .searchBar .results {
+  width: 50%;
   padding: 0px;
   position: absolute;
 }
@@ -265,17 +270,32 @@ body nav ul h4:hover {
 
 .mainbanner .searchBar .show .results ul li, .mainbanner2 .searchBar .show .results ul li {
   opacity: 1;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: white;
+  cursor: pointer;
 }
 
-.mainbanner .searchBar .show .results, .mainbanner2 .searchBar .show .results {
-  margin: 0 15px;
+.mainbanner .searchBar .show .results ul li img, .mainbanner2 .searchBar .show .results ul li img {
+  max-width: 12px;
+  padding: 0 10px;
 }
 
 .mainbanner .searchBar .results ul li:hover, .mainbanner2 .searchBar .results ul li:hover {
-  background: #572EE5;
-  color: white;
+  background: lightgrey;
+  color: #572EE5;
+}
+
+.mainbanner .searchBar .closeBtn, .mainbanner2 .searchBar .closeBtn {
+  display: none;
 }
 
 .mainbanner .trendingTopics, .mainbanner2 .trendingTopics {
@@ -345,7 +365,7 @@ body nav ul h4:hover {
   padding: 60px;
 }
 
-.searchBtn {
+.searchBtn, .closeBtn {
   cursor: pointer;
 }
 
@@ -919,7 +939,11 @@ footer .socialmedia ul li span:hover {
     width: 100%;
   }
   .mainbanner .searchBar {
-    width: 80%;
+    width: 100%;
+  }
+  .mainbanner .searchBar .results {
+    width: 86%;
+    padding-bottom: 10px;
   }
   .mainbanner img {
     width: 100%;

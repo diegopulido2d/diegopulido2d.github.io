@@ -262,6 +262,16 @@ button.addEventListener("click", async () => {
 
 
 
+document.getElementsByClassName("searchBar")[0]
+.addEventListener("keyup", function(event) {
+event.preventDefault();
+if (event.keyCode === 13) {
+    button.click();
+}
+});
+
+
+
 
 
   // MODAL
