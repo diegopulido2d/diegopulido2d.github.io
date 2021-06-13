@@ -38,20 +38,27 @@
                 
                 if (input.length) {
                     renderResults(resTags);
-                    searchBtn.style.display = 'none';
+                    searchBtn.style.opacity = 1;
                     closeBtn.style.display = 'inline';
-                    search1.style.opacity = 1;
+                    search1.style.display = 'none';
+                } else {
+                    searchBtn.style.opacity = 0;
+                    closeBtn.style.display = 'none';
+                    search1.style.display = 'inline';
                 } 
+
                 
             })
             .catch(error => console.log('error', error));
 
     }
 
+    
+
     function closeSrch() {
         searchBtn.style.display = 'inline';
         closeBtn.style.display = 'none';
-        search1.style.opacity = 0;
+        search1.style.opacity = 1;
         return searchWrapper.classList.remove('show');
     }
 

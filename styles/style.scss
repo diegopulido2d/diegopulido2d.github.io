@@ -209,7 +209,6 @@ body{
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    justify-content: space-between;
                     border: 2px solid #572EE5;
                     border-radius: 40px;
                     padding: 10px 20px;
@@ -228,7 +227,8 @@ body{
                   }
                   
                 .search1{
-                    opacity: 0;
+                    opacity: 1;
+                    align-self: flex-end;
                 }
                 
                 .results {
@@ -268,6 +268,7 @@ body{
 
                 .closeBtn{
                     display: none;
+                    align-self: flex-end;
                 }
 
 
@@ -336,6 +337,10 @@ body{
 
         }
 
+        .searchBtn{
+            opacity: 0;
+            padding-right: 8px;
+        }
 
 
         .searchBtn, .closeBtn{
