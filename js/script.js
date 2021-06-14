@@ -44,6 +44,13 @@ function dwNormal(x){
 x.src= 'images/icons/icon-download.svg'; 
 }
 
+function cpHover(x){
+  x.src= 'images/icons/icon-link-hover.svg'; 
+}
+function cpNormal(x){
+  x.src= 'images/icons/icon-link-normal.svg'; 
+}
+
 
 
 

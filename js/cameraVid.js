@@ -137,6 +137,15 @@ function uploadGifo(){
     var gifoJson = JSON.parse(localStorage.getItem("uplGifos")) || [];
     gifoJson.push(gifoObj);
     localStorage.setItem("uplGifos", JSON.stringify(gifoJson));
+
+
+    let url = fetch('https://media3.giphy.com/media/'+result.data['id']+'/giphy.gif?cid=c0654d684obin35i33tj26i50xe0ho4gpxjao6ue4uwp07o7&rid=giphy.gif&ct=g');
+    url.then(response => response.blob())
+    .then(result => { 
+        const urlBlob = URL.createObjectURL(result);
+        document.getElementsByClassName('downloadIcon')[0].href = urlBlob;
+    });
+
     
 
 
