@@ -430,32 +430,31 @@ body nav ul h4:hover {
   margin: 10px;
 }
 
-.gifoCard .gifoOverlay, .gifoCardTrending .gifoOverlay {
+.gifoOverlay {
   position: absolute;
   top: 0;
-  height: 98%;
+  height: 100%;
   width: 100%;
-  color: transparent;
   color: transparent;
 }
 
-.gifoCard .gifoOverlay h4, .gifoCard .gifoOverlay h5, .gifoCardTrending .gifoOverlay h4, .gifoCardTrending .gifoOverlay h5 {
+.gifoOverlay h4, .gifoOverlay h5 {
   padding: 0 10px;
 }
 
-.gifoCard .gifoOverlay h4, .gifoCardTrending .gifoOverlay h4 {
+.gifoOverlay h4 {
   font-size: 14px;
 }
 
-.gifoCard .gifoOverlay h5, .gifoCardTrending .gifoOverlay h5 {
+.gifoOverlay h5 {
   font-size: 11px;
 }
 
-.gifoCard .gifoOverlay .gifoOverlayAct, .gifoCardTrending .gifoOverlay .gifoOverlayAct {
+.gifoOverlay .gifoOverlayAct {
   display: none;
 }
 
-.gifoCard .gifoOverlay .gifoOverlayAct span, .gifoCard .gifoOverlay .gifoOverlayAct a, .gifoCardTrending .gifoOverlay .gifoOverlayAct span, .gifoCardTrending .gifoOverlay .gifoOverlayAct a {
+.gifoOverlay .gifoOverlayAct span, .gifoOverlay .gifoOverlayAct a {
   padding: 6px 3px;
   cursor: pointer;
 }
@@ -786,7 +785,12 @@ footer .socialmedia ul li span:hover {
 
 .tab .tabCard .videoGifo {
   width: 100%;
+  height: 450px;
   display: none;
+}
+
+.tab .gifoCard {
+  margin: 0;
 }
 
 .tab .boton {
@@ -868,12 +872,12 @@ footer .socialmedia ul li span:hover {
 }
 
 .recordedGifo {
-  height: 100%;
+  height: 450px;
   display: none;
 }
 
 .recordedGifo2 {
-  height: 100%;
+  height: 450px;
 }
 
 .divisor {
@@ -1001,6 +1005,13 @@ footer .socialmedia ul li span:hover {
   }
   .crearGifoSec .crearGifoImg {
     display: none;
+  }
+  .recordedGifo {
+    height: 220px;
+    display: none;
+  }
+  .recordedGifo2 {
+    height: 220px;
   }
   #regForm {
     padding-top: 100px;
