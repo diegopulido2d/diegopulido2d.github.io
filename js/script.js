@@ -53,6 +53,17 @@ function cpNormal(x){
 
 
 
+// COPIAR URL
+
+function copyUrl() {
+  let copyText = document.getElementsByClassName('textarea')[0];
+  copyText.style.display = 'inline';
+  copyText.select();
+  let result = document.execCommand("copy");
+  return result;
+}
+
+
 
 
 

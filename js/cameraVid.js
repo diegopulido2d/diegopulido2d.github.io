@@ -129,10 +129,11 @@ function uploadGifo(){
   .then(response => response.json())
   .then(result => {
 
-    let gifoObj = {
-      'gifo': 'https://media3.giphy.com/media/'+result.data['id']+'/giphy.gif?cid=c0654d684obin35i33tj26i50xe0ho4gpxjao6ue4uwp07o7&rid=giphy.gif&ct=g'
-    }
+    let urlGiphy = 'https://media3.giphy.com/media/'+result.data['id']+'/giphy.gif?cid=c0654d684obin35i33tj26i50xe0ho4gpxjao6ue4uwp07o7&rid=giphy.gif&ct=g';
 
+    let gifoObj = {
+      'gifo': urlGiphy
+    }
 
     var gifoJson = JSON.parse(localStorage.getItem("uplGifos")) || [];
     gifoJson.push(gifoObj);
@@ -144,7 +145,10 @@ function uploadGifo(){
     .then(result => { 
         const urlBlob = URL.createObjectURL(result);
         document.getElementsByClassName('downloadIcon')[0].href = urlBlob;
+        document.getElementsByClassName('textarea')[0].setAttribute("value", urlGiphy);
     });
+
+    
 
     
 

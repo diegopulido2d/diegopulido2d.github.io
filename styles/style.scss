@@ -440,6 +440,7 @@ body{
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
+            align-items: center;
         }
 
 
@@ -858,6 +859,9 @@ body{
   }
 
 
+  .textarea{
+      display: none;
+  }
 
 
 

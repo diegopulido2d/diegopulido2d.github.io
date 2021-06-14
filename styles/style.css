@@ -477,6 +477,9 @@ body nav ul h4:hover {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .gifoCardTrending:hover .gifoOverlay {
@@ -907,6 +910,10 @@ footer .socialmedia ul li span:hover {
   color: white !important;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+.textarea {
+  display: none;
 }
 
 @media only screen and (max-width: 600px) {
